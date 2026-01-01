@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: NPCTurnSO_1
+  m_EditorClassIdentifier: Assembly-CSharp::NPCTurnSO
+  text: "\u4F60\u559C\u6B22\u770B\u7535\u5F71\u5417\uFF1F"
+  playerChoices:
+  - textPrompt: "\u559C\u6B22"
+    textLine: "\u559C\u6B22\u554A\uFF0C\u9662\u7EBF\u7535\u5F71\u548C\u5C0F\u4F17\u7535\u5F71\u90FD\u559C\u6B22\u3002"
+    npcResponse: "\u6211\u6700\u559C\u6B22\u7684\u5BFC\u6F14\u662F\u5854\u53EF\u592B\u65AF\u57FA\u3002"
+    affectionDelta: 0
+  - textPrompt: "\u4E0D\u559C\u6B22"
+    textLine: "\u6211\u5BF9\u7535\u5F71\u6CA1\u4EC0\u4E48\u5174\u8DA3\uFF0C\u9664\u975E\u522B\u4EBA\u8981\u6211\u966ATA\u3002"
+    npcResponse: "\u6211\u53EF\u4EE5\u7ED9\u4F60\u4E2A\u63A8\u8350\u89C2\u5F71\u7684list\u3002"
+    affectionDelta: 0
+  - textPrompt: "\u6CA1\u4EC0\u4E48\u504F\u597D "
+    textLine: "\u6211\u5BF9\u7535\u5F71\u6CA1\u4EC0\u4E48\u504F\u597D\uFF0C\u6709\u597D\u7535\u5F71\u6211\u53EF\u80FD\u4F1A\u53BB\u4E70\u5F20\u7968\u770B\u770B\u3002 "
+    npcResponse: "\u4E86\u89E3\u3002\u7968\u623F\u4E5F\u662F\u9662\u7EBF\u7535\u5F71\u7684\u53E3\u7891\u4FDD\u8BC1\u3002 "
+    affectionDelta: 0

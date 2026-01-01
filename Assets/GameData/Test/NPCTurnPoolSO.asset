@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: NPCTurnPoolSO
+  m_EditorClassIdentifier: Assembly-CSharp::NPCTurnPoolSO
+  npcTurns:
+  - {fileID: 11400000, guid: f18d94a372121234bb8f8b3540756ec5, type: 2}
+  - {fileID: 11400000, guid: 15c9ec69e98ee3d4690d9490b8dcad4c, type: 2}
+  - {fileID: 11400000, guid: 764dc9cc84906b643a00dc5408ddc526, type: 2}

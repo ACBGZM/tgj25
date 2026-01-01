@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: PlayerTurnSO_1
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerTurnSO
+  playerTopic:
+    textPrompt: "\u4E66\u5355 "
+    textLine: "\u4F60\u53EF\u4EE5\u63A8\u8350\u7ED9\u6211\u4E00\u4E9B\u4E66\u76EE\u5417\uFF1F "
+    npcResponse: "\u6211\u4E0D\u786E\u5B9A\u6211\u4EEC\u7684\u559C\u597D\u662F\u5426\u4E00\u81F4\uFF0C\u4F46\u662F\u6211\u4F1A\u63A8\u8350\u300A1984\u300B "
+    affectionDelta: 0
