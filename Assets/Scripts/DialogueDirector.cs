@@ -31,6 +31,7 @@ public class DialogueDirector : MonoBehaviour
     [Header("Systems")]
     public DialogueUI dialogueUI;
     private AffectionSystem _affectionSystem;
+    public HandDistanceView handDistanceView;
 
     [Header("Config")]
     public int playerTopicOptionCount = 2;
@@ -62,6 +63,8 @@ public class DialogueDirector : MonoBehaviour
     private void StartConversation()
     {
         _affectionSystem.Init(NPCDistanceConfigs[_currentNPCIndex]);
+
+        handDistanceView.Init(_currentNPCIndex, _affectionSystem.PlayerLevel, _affectionSystem.NPCLevel);
 
         StartNextTurn();
     }
@@ -175,7 +178,7 @@ public class DialogueDirector : MonoBehaviour
             // todo: bad end
         }
 
-        // UpdateHandView();
+        handDistanceView.UpdateView(_affectionSystem.PlayerLevel, _affectionSystem.NPCLevel);
 
         _currentTurnInitiator =
             _currentTurnInitiator == TurnInitiator.NPC ? TurnInitiator.Player : TurnInitiator.NPC;
