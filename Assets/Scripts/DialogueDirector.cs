@@ -3,9 +3,10 @@ using UnityEngine;
 
 public enum DialogueState : uint
 {
-    Opening,
-    Choosing,
-    Responding,
+    NPCOpening,    // npc turn only
+    PlayerChoosing,
+    NPCResponding,
+    PlayerConcluding,   // player turn only
     Resolving,
 }
 
@@ -13,6 +14,12 @@ public enum TurnInitiator : uint
 {
     NPC,
     Player,
+}
+
+public enum ConcludingChoice : uint
+{
+    Approach,
+    Withdraw,
 }
 
 public class DialogueDirector : MonoBehaviour
@@ -62,13 +69,13 @@ public class DialogueDirector : MonoBehaviour
 
     private void StartNPCTurn()
     {
-        currentState = DialogueState.Opening;
+        currentState = DialogueState.NPCOpening;
         currentNPCTurn = PickRandom(npcTurnPool.npcTurns);
 
         ui.Clear();
         ui.ShowNPCText(currentNPCTurn.text);    // todo: coroutine
 
-        currentState = DialogueState.Choosing;
+        currentState = DialogueState.PlayerChoosing;
         ui.ShowPlayerChoices(currentNPCTurn.playerChoices, OnNPCAnswerSelected);
     }
 
@@ -90,7 +97,7 @@ public class DialogueDirector : MonoBehaviour
             topics.Add(playerTurn.playerTopic);
         }
 
-        currentState = DialogueState.Choosing;
+        currentState = DialogueState.PlayerChoosing;
         ui.ShowPlayerChoices(topics, OnPlayerTopicSelected);
     }
 
@@ -100,15 +107,37 @@ public class DialogueDirector : MonoBehaviour
         EnterResponding();
     }
 
-    void EnterResponding()
+    private void EnterResponding()
     {
-        currentState = DialogueState.Responding;
+        currentState = DialogueState.NPCResponding;
         ui.ShowNPCText(selectedPlayerChoice.npcResponse);
 
+        if (currentTurnInitiator == TurnInitiator.NPC)
+        {
+            EnterResolve();
+        }
+        else
+        {
+            EnterConcluding();
+        }
+    }
+
+    private void EnterConcluding()
+    {
+        currentState = DialogueState.PlayerConcluding;
+
+        ui.ShowConcluding(
+            onApproach: () => OnConcludingSelected(ConcludingChoice.Approach),
+            onWithdraw: () => OnConcludingSelected(ConcludingChoice.Withdraw)
+        );
+    }
+
+    private void OnConcludingSelected(ConcludingChoice choice)
+    {
         EnterResolve();
     }
 
-    void EnterResolve()
+    private void EnterResolve()
     {
         currentState = DialogueState.Resolving;
 

@@ -13,7 +13,11 @@ public class DialogueUI : MonoBehaviour
     public GameObject playerBubblePrefab;
     public GameObject choiceButtonPrefab;
 
-    public ScrollRect scrollRect;
+    public ScrollRect chatScrollRect;
+
+    public GameObject conclusionPanel;
+    public Button approachButton;
+    public Button withdrawButton;
 
     public void ShowNPCText(string text)
     {
@@ -71,6 +75,25 @@ public class DialogueUI : MonoBehaviour
     private void ScrollToBottom()
     {
         Canvas.ForceUpdateCanvases();
-        scrollRect.verticalNormalizedPosition = 0f;
+        chatScrollRect.verticalNormalizedPosition = 0f;
+    }
+
+    public void ShowConcluding(Action onApproach, Action onWithdraw)
+    {
+        conclusionPanel.SetActive(true);
+
+        approachButton.onClick.RemoveAllListeners();
+        withdrawButton.onClick.RemoveAllListeners();
+
+        approachButton.onClick.AddListener(() =>
+        {
+            onApproach?.Invoke();
+            conclusionPanel.SetActive(false);
+        });
+        withdrawButton.onClick.AddListener(() =>
+        {
+            onWithdraw?.Invoke();
+            conclusionPanel.SetActive(false);
+        });
     }
 }
