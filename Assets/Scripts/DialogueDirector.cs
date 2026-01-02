@@ -29,35 +29,48 @@ public class DialogueDirector : MonoBehaviour
     public PlayerTurnPoolSO playerTurnPool;
 
     [Header("Systems")]
-    public DialogueUI ui;
-    public AffectionSystem affectionSystem;
+    public DialogueUI dialogueUI;
+    private AffectionSystem _affectionSystem;
 
     [Header("Config")]
     public int playerTopicOptionCount = 2;
 
-    private NPCTurnSO currentNPCTurn;
-    private List<PlayerTurnSO> currentPlayerTurnOptions;
-    private PlayerChoice selectedPlayerChoice;
+    [Header("NPCDistanceConfig")]
+    public List<HandDistanceConfigSO> NPCDistanceConfigs;
+
+    private int _currentNPCIndex = 0;
+
+    private NPCTurnSO _currentNPCTurn;
+    private List<PlayerTurnSO> _currentPlayerTurnOptions;
+    private PlayerChoice _selectedPlayerChoice;
+    private ConcludingChoice _selectedConcludingChoice;
 
     public DialogueState currentState;
-    private TurnInitiator currentTurnInitiator = TurnInitiator.NPC;
+    private TurnInitiator _currentTurnInitiator = TurnInitiator.NPC;
 
     void Start()
     {
         InitData();
-        StartNextTurn();
+        StartConversation();
     }
 
     private void InitData()
     {
+        _affectionSystem =  new AffectionSystem();
+    }
 
+    private void StartConversation()
+    {
+        _affectionSystem.Init(NPCDistanceConfigs[_currentNPCIndex]);
+
+        StartNextTurn();
     }
 
     private void StartNextTurn()
     {
-        selectedPlayerChoice = null;
+        _selectedPlayerChoice = null;
 
-        if (currentTurnInitiator == TurnInitiator.NPC)
+        if (_currentTurnInitiator == TurnInitiator.NPC)
         {
             StartNPCTurn();
         }
@@ -70,49 +83,49 @@ public class DialogueDirector : MonoBehaviour
     private void StartNPCTurn()
     {
         currentState = DialogueState.NPCOpening;
-        currentNPCTurn = PickRandom(npcTurnPool.npcTurns);
+        _currentNPCTurn = PickRandom(npcTurnPool.npcTurns);
 
-        ui.Clear();
-        ui.ShowNPCText(currentNPCTurn.text);    // todo: coroutine
+        dialogueUI.Clear();
+        dialogueUI.ShowNPCText(_currentNPCTurn.text);    // todo: coroutine
 
         currentState = DialogueState.PlayerChoosing;
-        ui.ShowPlayerChoices(currentNPCTurn.playerChoices, OnNPCAnswerSelected);
+        dialogueUI.ShowPlayerChoices(_currentNPCTurn.playerChoices, OnNPCAnswerSelected);
     }
 
     private void OnNPCAnswerSelected(int index)
     {
-        selectedPlayerChoice = currentNPCTurn.playerChoices[index];
+        _selectedPlayerChoice = _currentNPCTurn.playerChoices[index];
         EnterResponding();
     }
 
     private void StartPlayerTurn()
     {
-        currentPlayerTurnOptions = PickRandomList(playerTurnPool.playerTurns, playerTopicOptionCount);
+        _currentPlayerTurnOptions = PickRandomList(playerTurnPool.playerTurns, playerTopicOptionCount);
 
-        ui.Clear();
+        dialogueUI.Clear();
 
         List<PlayerChoice> topics = new List<PlayerChoice>();
-        foreach (PlayerTurnSO playerTurn in currentPlayerTurnOptions)
+        foreach (PlayerTurnSO playerTurn in _currentPlayerTurnOptions)
         {
             topics.Add(playerTurn.playerTopic);
         }
 
         currentState = DialogueState.PlayerChoosing;
-        ui.ShowPlayerChoices(topics, OnPlayerTopicSelected);
+        dialogueUI.ShowPlayerChoices(topics, OnPlayerTopicSelected);
     }
 
     private void OnPlayerTopicSelected(int index)
     {
-        selectedPlayerChoice = currentPlayerTurnOptions[index].playerTopic;
+        _selectedPlayerChoice = _currentPlayerTurnOptions[index].playerTopic;
         EnterResponding();
     }
 
     private void EnterResponding()
     {
         currentState = DialogueState.NPCResponding;
-        ui.ShowNPCText(selectedPlayerChoice.npcResponse);
+        dialogueUI.ShowNPCText(_selectedPlayerChoice.npcResponse);
 
-        if (currentTurnInitiator == TurnInitiator.NPC)
+        if (_currentTurnInitiator == TurnInitiator.NPC)
         {
             EnterResolve();
         }
@@ -126,7 +139,7 @@ public class DialogueDirector : MonoBehaviour
     {
         currentState = DialogueState.PlayerConcluding;
 
-        ui.ShowConcluding(
+        dialogueUI.ShowConcluding(
             onApproach: () => OnConcludingSelected(ConcludingChoice.Approach),
             onWithdraw: () => OnConcludingSelected(ConcludingChoice.Withdraw)
         );
@@ -134,6 +147,7 @@ public class DialogueDirector : MonoBehaviour
 
     private void OnConcludingSelected(ConcludingChoice choice)
     {
+        _selectedConcludingChoice = choice;
         EnterResolve();
     }
 
@@ -141,10 +155,30 @@ public class DialogueDirector : MonoBehaviour
     {
         currentState = DialogueState.Resolving;
 
-        affectionSystem?.ApplyDelta(selectedPlayerChoice.affectionDelta);   // todo
+        if (_currentTurnInitiator == TurnInitiator.NPC)
+        {
+            _affectionSystem.ResolveNPCTurn();
+        }
+        else
+        {
+            _affectionSystem.ResolvePlayerTurn(_selectedConcludingChoice == ConcludingChoice.Approach);
+        }
 
-        currentTurnInitiator =
-            currentTurnInitiator == TurnInitiator.NPC ? TurnInitiator.Player : TurnInitiator.NPC;
+        int result = _affectionSystem.CheckConversationEnded();
+
+        if (result == 1)
+        {
+            // todo: good end
+        }
+        else if (result == -1)
+        {
+            // todo: bad end
+        }
+
+        // UpdateHandView();
+
+        _currentTurnInitiator =
+            _currentTurnInitiator == TurnInitiator.NPC ? TurnInitiator.Player : TurnInitiator.NPC;
 
         StartNextTurn();
     }
