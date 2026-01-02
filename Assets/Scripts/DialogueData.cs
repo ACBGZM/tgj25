@@ -8,12 +8,12 @@ public class PlayerChoice
     public string textLine;
 
     public string npcResponse;
-    public int affectionDelta;
 }
 
 [CreateAssetMenu(fileName = "NPCTurnSO", menuName = "Scriptable Objects/NPC Turn SO")]
 public class NPCTurnSO : ScriptableObject
 {
+    public int level;
     public string text;
     public List<PlayerChoice> playerChoices;
 }
@@ -21,6 +21,7 @@ public class NPCTurnSO : ScriptableObject
 [CreateAssetMenu(fileName = "PlayerTurnSO", menuName = "Scriptable Objects/Player Turn SO")]
 public class PlayerTurnSO : ScriptableObject
 {
+    public int level;
     public PlayerChoice playerTopic;
 }
 
