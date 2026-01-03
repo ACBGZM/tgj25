@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f76c79ee172b384587fac758e609f63, type: 3}
+  m_Name: NPCProfileSO_1
+  m_EditorClassIdentifier: Assembly-CSharp::NPCProfileSO
+  npcTurnPool: {fileID: 11400000, guid: 9b1cf1d8211204440b6932d6bcba2fb4, type: 2}
+  playerTurnPool: {fileID: 11400000, guid: 7b25c7a480548b446bae12e4e98027bd, type: 2}
+  handDistanceConfig: {fileID: 11400000, guid: a2396e6489e96d549a920112306fac0c, type: 2}
+  introText: 1111
+  npcHandSprites:
+  - {fileID: 2198357516193698181, guid: e8720e020292ca445a339125bb8abb5c, type: 3}
+  - {fileID: -9103038698345713032, guid: a55e46c989ffb314db2556bbf595491a, type: 3}
+  - {fileID: -6965929377249843067, guid: 0cc9d32d0e72f9c45b63e7d89c0b2f2a, type: 3}
+  - {fileID: -1426397898000065804, guid: fb531dc7ed602044390061539ce2ac44, type: 3}
+  - {fileID: 8198566214992978379, guid: 1aa214972c0850b41b3b4e938ea5dd46, type: 3}

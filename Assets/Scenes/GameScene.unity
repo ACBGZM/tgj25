@@ -665,7 +665,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1076060549
 RectTransform:
@@ -1054,13 +1054,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00b42d6a5c7ce9144abb4ef1a0d2fccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueDirector
-  npcTurnPool: {fileID: 11400000, guid: 9b1cf1d8211204440b6932d6bcba2fb4, type: 2}
-  playerTurnPool: {fileID: 11400000, guid: 7b25c7a480548b446bae12e4e98027bd, type: 2}
+  npcProfiles:
+  - {fileID: 11400000, guid: 8cda182ea269b32418dd2a6e5f3a0423, type: 2}
+  - {fileID: 11400000, guid: 22da4b05c3ac70743a666b4a3ba71f83, type: 2}
+  - {fileID: 11400000, guid: 5139248150ba58a42a2f038c2c7424db, type: 2}
   dialogueUI: {fileID: 1076060550}
   handDistanceView: {fileID: 2028721408}
   playerTopicOptionCount: 2
-  NPCDistanceConfigs:
-  - {fileID: 11400000, guid: ca4eb696c1892b94ab90dd061c758e79, type: 2}
   currentState: 0
 --- !u!4 &1509770359
 Transform:

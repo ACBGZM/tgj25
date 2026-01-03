@@ -1,12 +1,13 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public enum DialogueState : uint
 {
-    NPCOpening,    // npc turn only
+    NPCOpening, // npc turn only
     PlayerChoosing,
     NPCResponding,
-    PlayerConcluding,   // player turn only
+    PlayerConcluding, // player turn only
     Resolving,
 }
 
@@ -24,22 +25,15 @@ public enum ConcludingChoice : uint
 
 public class DialogueDirector : MonoBehaviour
 {
-    [Header("Pools")]
-    public NPCTurnPoolSO npcTurnPool;
-    public PlayerTurnPoolSO playerTurnPool;
+    [Header("NPCs")] public List<NPCProfileSO> npcProfiles;
+    private NPCProfileSO _currentNPC;
+    private int _currentNPCIndex = 0;
 
-    [Header("Systems")]
-    public DialogueUI dialogueUI;
+    [Header("Systems")] public DialogueUI dialogueUI;
     private AffectionSystem _affectionSystem;
     public HandDistanceView handDistanceView;
 
-    [Header("Config")]
-    public int playerTopicOptionCount = 2;
-
-    [Header("NPCDistanceConfig")]
-    public List<HandDistanceConfigSO> NPCDistanceConfigs;
-
-    private int _currentNPCIndex = 0;
+    [Header("Config")] public int playerTopicOptionCount = 2;
 
     private NPCTurnSO _currentNPCTurn;
     private List<PlayerTurnSO> _currentPlayerTurnOptions;
@@ -57,14 +51,15 @@ public class DialogueDirector : MonoBehaviour
 
     private void InitData()
     {
-        _affectionSystem =  new AffectionSystem();
+        _affectionSystem = new AffectionSystem();
     }
 
     private void StartConversation()
     {
-        _affectionSystem.Init(NPCDistanceConfigs[_currentNPCIndex]);
+        _currentNPC = npcProfiles[_currentNPCIndex];
 
-        handDistanceView.Init(_currentNPCIndex, _affectionSystem.PlayerLevel, _affectionSystem.NPCLevel);
+        _affectionSystem.Init(_currentNPC.handDistanceConfig);
+        handDistanceView.Init(_currentNPC.npcHandSprites, _affectionSystem.PlayerLevel, _affectionSystem.NPCLevel);
 
         StartNextTurn();
     }
@@ -86,10 +81,10 @@ public class DialogueDirector : MonoBehaviour
     private void StartNPCTurn()
     {
         currentState = DialogueState.NPCOpening;
-        _currentNPCTurn = PickRandom(npcTurnPool.npcTurns);
+        _currentNPCTurn = PickRandom(_currentNPC.npcTurnPool.npcTurns);
 
         dialogueUI.Clear();
-        dialogueUI.ShowNPCText(_currentNPCTurn.text);    // todo: coroutine
+        dialogueUI.ShowNPCText(_currentNPCTurn.text); // todo: coroutine
 
         currentState = DialogueState.PlayerChoosing;
         dialogueUI.ShowPlayerChoices(_currentNPCTurn.playerChoices, OnNPCAnswerSelected);
@@ -103,7 +98,7 @@ public class DialogueDirector : MonoBehaviour
 
     private void StartPlayerTurn()
     {
-        _currentPlayerTurnOptions = PickRandomList(playerTurnPool.playerTurns, playerTopicOptionCount);
+        _currentPlayerTurnOptions = PickRandomList(_currentNPC.playerTurnPool.playerTurns, playerTopicOptionCount);
 
         dialogueUI.Clear();
 
@@ -167,23 +162,42 @@ public class DialogueDirector : MonoBehaviour
             _affectionSystem.ResolvePlayerTurn(_selectedConcludingChoice == ConcludingChoice.Approach);
         }
 
-        int result = _affectionSystem.CheckConversationEnded();
-
-        if (result == 1)
-        {
-            // todo: good end
-        }
-        else if (result == -1)
-        {
-            // todo: bad end
-        }
-
         handDistanceView.UpdateView(_affectionSystem.PlayerLevel, _affectionSystem.NPCLevel);
 
-        _currentTurnInitiator =
-            _currentTurnInitiator == TurnInitiator.NPC ? TurnInitiator.Player : TurnInitiator.NPC;
+        ConversationResult result = _affectionSystem.CheckConversationEnded();
 
-        StartNextTurn();
+        if (result == ConversationResult.Good)
+        {
+            // todo: good end
+            StartCoroutine(ProceedToNextNPC());
+        }
+        else if (result == ConversationResult.Bad)
+        {
+            // todo: bad end
+            StartCoroutine(ProceedToNextNPC());
+        }
+        else
+        {
+            _currentTurnInitiator =
+                _currentTurnInitiator == TurnInitiator.NPC ? TurnInitiator.Player : TurnInitiator.NPC;
+
+            StartNextTurn();
+        }
+    }
+
+    IEnumerator ProceedToNextNPC()
+    {
+        yield return new WaitForSeconds(1.0f);
+
+        _currentNPCIndex++;
+
+        if (_currentNPCIndex >= npcProfiles.Count)
+        {
+            // todo: game over
+            yield break;
+        }
+
+        StartConversation();
     }
 
     T PickRandom<T>(List<T> list)
@@ -212,5 +226,4 @@ public class DialogueDirector : MonoBehaviour
 
         return result;
     }
-
 }

@@ -4,21 +4,20 @@ using UnityEngine.UI;
 public class HandDistanceView : MonoBehaviour
 {
     [SerializeField] private Sprite[] playerHandSprites;
-    [SerializeField] private Sprite[] npcHandSprites;
+    private Sprite[] _npcHandSprites;
 
     [SerializeField] private Image playerHandImage;
     [SerializeField] private Image npcHandImage;
 
-    public void Init(int npcIndex, int playerLevel, int npcLevel)
+    public void Init(Sprite[] npcHandSprites, int playerLevel, int npcLevel)
     {
-        // todo: multiple npc
-
+        _npcHandSprites =  npcHandSprites;
         UpdateView(playerLevel, npcLevel);
     }
 
     public void UpdateView(int playerLevel, int npcLevel)
     {
         playerHandImage.sprite = playerHandSprites[playerLevel - 1];
-        npcHandImage.sprite = npcHandSprites[npcLevel - 1];
+        npcHandImage.sprite = _npcHandSprites[npcLevel - 1];
     }
 }

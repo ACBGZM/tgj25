@@ -1,6 +1,12 @@
 
-using System.Collections.Generic;
 using UnityEngine;
+
+public enum ConversationResult : uint
+{
+    None,
+    Good,
+    Bad,
+}
 
 public class AffectionSystem
 {
@@ -47,19 +53,20 @@ public class AffectionSystem
     // return
     // 1: good end, -1: bad end
     // 0: continue
-    public int CheckConversationEnded()
+
+    public ConversationResult CheckConversationEnded()
     {
         if (PlayerLevel == 1 && NPCLevel == 1)
         {
-            return -1;
+            return ConversationResult.Bad;
         }
 
         if (PlayerLevel == 5 && NPCLevel == 5)
         {
-            return 1;
+            return ConversationResult.Good;
         }
 
-        return 0;
+        return ConversationResult.None;
     }
 
     private void TryMoveNPC(int delta)
