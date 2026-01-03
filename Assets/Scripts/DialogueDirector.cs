@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,15 +26,19 @@ public enum ConcludingChoice : uint
 
 public class DialogueDirector : MonoBehaviour
 {
-    [Header("NPCs")] public List<NPCProfileSO> npcProfiles;
+    [Header("NPCs")]
+    public List<NPCProfileSO> npcProfiles;
     private NPCProfileSO _currentNPC;
     private int _currentNPCIndex = 0;
 
-    [Header("Systems")] public DialogueUI dialogueUI;
+    [Header("Systems")]
+    public DialogueUI dialogueUI;
     private AffectionSystem _affectionSystem;
     public HandDistanceView handDistanceView;
 
-    [Header("Config")] public int playerTopicOptionCount = 2;
+    [Header("Config")]
+    public int playerTopicOptionCount = 2;
+    public GameTextSO gameTextSO;
 
     private NPCTurnSO _currentNPCTurn;
     private List<PlayerTurnSO> _currentPlayerTurnOptions;
@@ -42,6 +47,18 @@ public class DialogueDirector : MonoBehaviour
 
     public DialogueState currentState;
     private TurnInitiator _currentTurnInitiator = TurnInitiator.NPC;
+
+    private Coroutine _currentSequence;
+
+    private void PlaySequence(IEnumerator sequence)
+    {
+        if (_currentSequence != null)
+        {
+            StopCoroutine(_currentSequence);
+        }
+
+        _currentSequence = StartCoroutine(sequence);
+    }
 
     void Start()
     {
@@ -60,6 +77,16 @@ public class DialogueDirector : MonoBehaviour
 
         _affectionSystem.Init(_currentNPC.handDistanceConfig);
         handDistanceView.Init(_currentNPC.npcHandSprites, _affectionSystem.PlayerLevel, _affectionSystem.NPCLevel);
+
+        PlaySequence(ConversationIntroSequence());
+    }
+
+    private IEnumerator ConversationIntroSequence()
+    {
+        handDistanceView.Clear();
+        handDistanceView.ShowCenterText(_currentNPC.introText);
+        yield return YieldHelper.WaitForSeconds(3.0f);
+        handDistanceView.HideCenterText();
 
         StartNextTurn();
     }
@@ -81,13 +108,39 @@ public class DialogueDirector : MonoBehaviour
     private void StartNPCTurn()
     {
         currentState = DialogueState.NPCOpening;
-        _currentNPCTurn = PickRandom(_currentNPC.npcTurnPool.npcTurns);
+        _currentNPCTurn = RandomHelper.PickOne(_currentNPC.npcTurnPool.npcTurns);
 
+        PlaySequence(NPCTurnSequence());
+    }
+
+    private IEnumerator NPCTurnSequence()
+    {
         dialogueUI.Clear();
-        dialogueUI.ShowNPCText(_currentNPCTurn.text); // todo: coroutine
+        dialogueUI.ShowNPCText(_currentNPCTurn.text);
+        yield return YieldHelper.WaitForSeconds(2.0f);
 
         currentState = DialogueState.PlayerChoosing;
-        dialogueUI.ShowPlayerChoices(_currentNPCTurn.playerChoices, OnNPCAnswerSelected);
+        bool choiceMade = false;
+        int selectedIndex = -1;
+
+        dialogueUI.ShowPlayerChoices(_currentNPCTurn.playerChoices, index =>
+        {
+            choiceMade = true;
+            selectedIndex = index;
+        });
+
+        yield return YieldHelper.WaitUntil(() => choiceMade);
+
+        _selectedPlayerChoice = _currentNPCTurn.playerChoices[selectedIndex];
+
+        dialogueUI.ShowPlayerText(_selectedPlayerChoice.textLine);
+        yield return YieldHelper.WaitForSeconds(2.0f);
+
+        currentState = DialogueState.NPCResponding;
+        dialogueUI.ShowNPCText(_selectedPlayerChoice.npcResponse);
+        yield return YieldHelper.WaitForSeconds(2.0f);
+
+        EnterResolve();
     }
 
     private void OnNPCAnswerSelected(int index)
@@ -98,8 +151,14 @@ public class DialogueDirector : MonoBehaviour
 
     private void StartPlayerTurn()
     {
-        _currentPlayerTurnOptions = PickRandomList(_currentNPC.playerTurnPool.playerTurns, playerTopicOptionCount);
+        _currentPlayerTurnOptions =
+            RandomHelper.PickRandomList(_currentNPC.playerTurnPool.playerTurns, playerTopicOptionCount);
 
+        PlaySequence(PlayerTurnSequence());
+    }
+
+    private IEnumerator PlayerTurnSequence()
+    {
         dialogueUI.Clear();
 
         List<PlayerChoice> topics = new List<PlayerChoice>();
@@ -109,7 +168,44 @@ public class DialogueDirector : MonoBehaviour
         }
 
         currentState = DialogueState.PlayerChoosing;
-        dialogueUI.ShowPlayerChoices(topics, OnPlayerTopicSelected);
+        bool topicChoosen = false;
+        int selectedIndex = -1;
+
+        dialogueUI.ShowPlayerChoices(topics, index =>
+        {
+            topicChoosen = true;
+            selectedIndex = index;
+        });
+
+        yield return YieldHelper.WaitUntil(() => topicChoosen);
+
+        _selectedPlayerChoice = _currentPlayerTurnOptions[selectedIndex].playerTopic;
+
+        dialogueUI.ShowPlayerText(_selectedPlayerChoice.textLine);
+        yield return YieldHelper.WaitForSeconds(2.0f);
+
+        currentState = DialogueState.NPCResponding;
+        dialogueUI.ShowNPCText(_selectedPlayerChoice.npcResponse);
+        yield return YieldHelper.WaitForSeconds(2.0f);
+
+        currentState = DialogueState.PlayerConcluding;
+        bool concludingChoosen = false;
+
+        dialogueUI.ShowConcluding(
+            onApproach: () =>
+            {
+                OnConcludingSelected(ConcludingChoice.Approach);
+                concludingChoosen = true;
+            },
+            onWithdraw: () =>
+            {
+                OnConcludingSelected(ConcludingChoice.Withdraw);
+                concludingChoosen = true;
+            });
+
+        yield return YieldHelper.WaitUntil(() => concludingChoosen);
+
+        EnterResolve();
     }
 
     private void OnPlayerTopicSelected(int index)
@@ -120,9 +216,6 @@ public class DialogueDirector : MonoBehaviour
 
     private void EnterResponding()
     {
-        currentState = DialogueState.NPCResponding;
-        dialogueUI.ShowNPCText(_selectedPlayerChoice.npcResponse);
-
         if (_currentTurnInitiator == TurnInitiator.NPC)
         {
             EnterResolve();
@@ -152,44 +245,61 @@ public class DialogueDirector : MonoBehaviour
     private void EnterResolve()
     {
         currentState = DialogueState.Resolving;
+        int npcResult = 0;
+        int playerResult = 0;
 
         if (_currentTurnInitiator == TurnInitiator.NPC)
         {
-            _affectionSystem.ResolveNPCTurn();
+            npcResult = _affectionSystem.ResolveNPCTurn();
         }
         else
         {
-            _affectionSystem.ResolvePlayerTurn(_selectedConcludingChoice == ConcludingChoice.Approach);
+            playerResult = _affectionSystem.ResolvePlayerTurn(_selectedConcludingChoice == ConcludingChoice.Approach);
         }
 
-        handDistanceView.UpdateView(_affectionSystem.PlayerLevel, _affectionSystem.NPCLevel);
-
-        ConversationResult result = _affectionSystem.CheckConversationEnded();
-
-        if (result == ConversationResult.Good)
-        {
-            // todo: good end
-            StartCoroutine(ProceedToNextNPC());
-        }
-        else if (result == ConversationResult.Bad)
-        {
-            // todo: bad end
-            StartCoroutine(ProceedToNextNPC());
-        }
-        else
-        {
-            _currentTurnInitiator =
-                _currentTurnInitiator == TurnInitiator.NPC ? TurnInitiator.Player : TurnInitiator.NPC;
-
-            StartNextTurn();
-        }
+        PlaySequence(ResolveSequence(npcResult, playerResult));
     }
 
-    IEnumerator ProceedToNextNPC()
+    private IEnumerator ResolveSequence(int npcResult, int playerResult)
+    {
+        handDistanceView.UpdateView(_affectionSystem.PlayerLevel, _affectionSystem.NPCLevel);
+        yield return YieldHelper.WaitForSeconds(1.0f);
+
+        if (npcResult == 0 && playerResult == 0)
+        {
+            handDistanceView.ShowCornerText(gameTextSO.maintainText);
+        }
+        else if (npcResult == 1 || playerResult == 1)
+        {
+            handDistanceView.ShowCornerText(gameTextSO.approachText);
+        }
+        else if (npcResult == -1 || playerResult == -1)
+        {
+            handDistanceView.ShowCornerText(gameTextSO.withdrawText);
+        }
+
+        yield return new WaitForSeconds(2f);
+        handDistanceView.HideCornerText();
+        dialogueUI.ClearChat();
+
+        ConversationResult result = _affectionSystem.CheckConversationEnded();
+        if (result != ConversationResult.None)
+        {
+            PlaySequence(ConversationEndSequence(result));
+            yield break;
+        }
+
+        _currentTurnInitiator =
+            _currentTurnInitiator == TurnInitiator.NPC ? TurnInitiator.Player : TurnInitiator.NPC;
+
+        StartNextTurn();
+    }
+
+    private IEnumerator ConversationEndSequence(ConversationResult result)
     {
         yield return new WaitForSeconds(1.0f);
 
-        _currentNPCIndex++;
+        handDistanceView.ShowCenterText(result == ConversationResult.Good ? gameTextSO.goodEndText : gameTextSO.badEndText);
 
         if (_currentNPCIndex >= npcProfiles.Count)
         {
@@ -197,33 +307,10 @@ public class DialogueDirector : MonoBehaviour
             yield break;
         }
 
-        StartConversation();
-    }
-
-    T PickRandom<T>(List<T> list)
-    {
-        if (list == null || list.Count == 0)
+        dialogueUI.ShowContinueButton(() =>
         {
-            return default;
-        }
-
-        return list[Random.Range(0, list.Count)];
-    }
-
-    List<T> PickRandomList<T>(List<T> source, int count)
-    {
-        List<T> copy = new List<T>(source);
-        List<T> result = new List<T>();
-
-        count = Mathf.Min(count, copy.Count);
-
-        for (int i = 0; i < count; i++)
-        {
-            int index = Random.Range(0, copy.Count);
-            result.Add(copy[index]);
-            copy.RemoveAt(index);
-        }
-
-        return result;
+            _currentNPCIndex++;
+            StartConversation();
+        });
     }
 }

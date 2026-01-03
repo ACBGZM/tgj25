@@ -14,10 +14,13 @@ public class DialogueUI : MonoBehaviour
     public GameObject choiceButtonPrefab;
 
     public ScrollRect chatScrollRect;
+    public Transform chatScrollRectContent;
 
     public GameObject conclusionPanel;
     public Button approachButton;
     public Button withdrawButton;
+
+    [SerializeField] private Button continueButton;
 
     public void ShowNPCText(string text)
     {
@@ -47,7 +50,6 @@ public class DialogueUI : MonoBehaviour
             button.onClick.AddListener(() =>
             {
                 ClearChoices();
-                ShowPlayerText(choice.textLine);
                 onSelect?.Invoke(index);
             });
         }
@@ -95,5 +97,28 @@ public class DialogueUI : MonoBehaviour
             onWithdraw?.Invoke();
             conclusionPanel.SetActive(false);
         });
+    }
+
+    public void ShowContinueButton(Action onSelect)
+    {
+        continueButton.gameObject.SetActive(true);
+
+        continueButton.onClick.RemoveAllListeners();
+        continueButton.onClick.AddListener(() =>
+        {
+            onSelect?.Invoke();
+            continueButton.gameObject.SetActive(false);
+        });
+    }
+
+    public void ClearChat()
+    {
+        for (int i = chatScrollRectContent.childCount - 1; i >= 0; i--)
+        {
+            Destroy(chatScrollRectContent.GetChild(i).gameObject);
+        }
+
+        Canvas.ForceUpdateCanvases();
+        chatScrollRect.verticalNormalizedPosition = 1f;
     }
 }

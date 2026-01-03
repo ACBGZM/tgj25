@@ -22,7 +22,7 @@ public class AffectionSystem
         NPCLevel = 3;
     }
 
-    public void ResolveNPCTurn()
+    public int ResolveNPCTurn()
     {
         DistanceProbability prob = _distanceConfig.GetProbability(NPCLevel);
         float roll = Random.Range(0.0f, 1.0f);
@@ -30,33 +30,32 @@ public class AffectionSystem
         if (roll < prob.approach)
         {
             TryMoveNPC(+1);
+            return 1;
         }
         else
         {
             TryMoveNPC(-1);
+            return -1;
         }
     }
 
-    public void ResolvePlayerTurn(bool approach)
+    public int ResolvePlayerTurn(bool approach)
     {
         int delta = approach ? +1 : -1;
 
         if (PlayerLevel == 5 && delta > 0
             || PlayerLevel == 1 && delta < 0)
         {
-            return;
+            return 0;
         }
 
         PlayerLevel = Mathf.Clamp(PlayerLevel + delta, 1, 5);
+        return delta;
     }
-
-    // return
-    // 1: good end, -1: bad end
-    // 0: continue
 
     public ConversationResult CheckConversationEnded()
     {
-        if (PlayerLevel == 1 && NPCLevel == 1)
+        if (PlayerLevel == 1 || NPCLevel == 1)
         {
             return ConversationResult.Bad;
         }
