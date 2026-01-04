@@ -17,8 +17,8 @@ MonoBehaviour:
   handDistanceConfig: {fileID: 11400000, guid: 02f97ac4cdd91a7458ec07c4139d9e8b, type: 2}
   introText: 2222
   npcHandSprites:
-  - {fileID: -8262670215170741230, guid: 0bade643cb283324c93f7000f209f5c5, type: 3}
-  - {fileID: 5532647646164709520, guid: 69f1ae2a1f398a04997ae2e787da634f, type: 3}
-  - {fileID: 6024626553409683016, guid: a59c935a891d57c4f856fb651859048d, type: 3}
-  - {fileID: -5657006022771298149, guid: 8adb0447713de834294b0c1ffed5fda6, type: 3}
-  - {fileID: 8399436660702967336, guid: 0fa320f8a053069469f4763f3eb2ab68, type: 3}
+  - {fileID: 21300000, guid: 0bade643cb283324c93f7000f209f5c5, type: 3}
+  - {fileID: 21300000, guid: 69f1ae2a1f398a04997ae2e787da634f, type: 3}
+  - {fileID: 21300000, guid: a59c935a891d57c4f856fb651859048d, type: 3}
+  - {fileID: 21300000, guid: 8adb0447713de834294b0c1ffed5fda6, type: 3}
+  - {fileID: 21300000, guid: 0fa320f8a053069469f4763f3eb2ab68, type: 3}
