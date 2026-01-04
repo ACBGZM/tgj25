@@ -4,13 +4,13 @@ using DG.Tweening;
 
 public class GameOpening : MonoBehaviour
 {
-    [Header("UI")]
-    public CanvasGroup startPanel;
+    [Header("UI")] public CanvasGroup startPanel;
     public CanvasGroup playerView;
     public CanvasGroup npcView;
 
-    [Header("Systems")]
-    public DialogueDirector dialogueDirector;
+    [Header("Systems")] public DialogueDirector dialogueDirector;
+
+    [Header("Audio")] [SerializeField] private AudioClip approachAudioClip;
 
     public void OnClickStart()
     {
@@ -25,14 +25,14 @@ public class GameOpening : MonoBehaviour
             .OnComplete(() => startPanel.gameObject.SetActive(false));
 
         seq.AppendInterval(0.5f);
+        seq.AppendCallback(() => AudioManager.Instance.PlaySFX(approachAudioClip));
         seq.Append(playerView.DOFade(1, 1.0f));
+
         seq.AppendInterval(0.5f);
+        seq.AppendCallback(() => AudioManager.Instance.PlaySFX(approachAudioClip));
         seq.Append(npcView.DOFade(1, 1.0f));
 
-        seq.OnComplete(() =>
-        {
-            dialogueDirector.StartConversation();
-        });
+        seq.OnComplete(() => { dialogueDirector.StartConversation(); });
     }
 
     public void ResetGame()

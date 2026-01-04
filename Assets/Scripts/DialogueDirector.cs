@@ -169,16 +169,16 @@ public class DialogueDirector : MonoBehaviour
         }
 
         currentState = DialogueState.PlayerChoosing;
-        bool topicChoosen = false;
+        bool topicChosen = false;
         int selectedIndex = -1;
 
         dialogueUI.ShowPlayerChoices(topics, index =>
         {
-            topicChoosen = true;
+            topicChosen = true;
             selectedIndex = index;
         });
 
-        yield return YieldHelper.WaitUntil(() => topicChoosen);
+        yield return YieldHelper.WaitUntil(() => topicChosen);
 
         _selectedPlayerChoice = _currentPlayerTurnOptions[selectedIndex].playerTopic;
 
@@ -218,53 +218,66 @@ public class DialogueDirector : MonoBehaviour
     private void EnterResolve()
     {
         currentState = DialogueState.Resolving;
-        int npcResult = 0;
-        int playerResult = 0;
 
         int npcLevelFormer = _affectionSystem.NPCLevel;
         int playerLevelFormer = _affectionSystem.PlayerLevel;
 
         if (_currentTurnInitiator == TurnInitiator.NPC)
         {
-            npcResult = _affectionSystem.ResolveNPCTurn();
+            _affectionSystem.ResolveNPCTurn();
         }
         else
         {
-            playerResult = _affectionSystem.ResolvePlayerTurn(_selectedConcludingChoice == ConcludingChoice.Approach);
+            _affectionSystem.ResolvePlayerTurn(_selectedConcludingChoice == ConcludingChoice.Approach);
         }
 
-        int npcLevelNew =  _affectionSystem.NPCLevel;
-        int playerLevelNew =  _affectionSystem.PlayerLevel;
+        int npcLevelNew = _affectionSystem.NPCLevel;
+        int playerLevelNew = _affectionSystem.PlayerLevel;
 
         PlaySequence(ResolveSequence(npcLevelNew - npcLevelFormer, playerLevelNew - playerLevelFormer));
     }
 
     private IEnumerator ResolveSequence(int npcResult, int playerResult)
     {
-        handDistanceView.UpdateView(_affectionSystem.PlayerLevel, _affectionSystem.NPCLevel);
-        bool withdraw = npcResult  < 0 || playerResult < 0;
-        bool apporach = npcResult > 0 || playerResult > 0;
-        bool maintain = npcResult == 0 || playerResult == 0;
+        yield return YieldHelper.WaitForSeconds(2.0f);
+        dialogueUI.ClearChat();
 
-        if (withdraw)
+        yield return YieldHelper.WaitForSeconds(0.5f);
+
+        handDistanceView.UpdateView(_affectionSystem.PlayerLevel, _affectionSystem.NPCLevel);
+
+        if (npcResult < 0)
         {
-            handDistanceView.ShowCornerText(gameTextSO.withdrawText);
+            handDistanceView.ShowCornerText(gameTextSO.withdrawTextNPC);
             AudioManager.Instance.PlaySFX(withdrawAudioClip);
         }
-        else if (apporach)
+        else if (playerResult < 0)
         {
-            handDistanceView.ShowCornerText(gameTextSO.approachText);
+            handDistanceView.ShowCornerText(gameTextSO.withdrawTextPlayer);
+            AudioManager.Instance.PlaySFX(withdrawAudioClip);
+        }
+        else if (npcResult > 0)
+        {
+            handDistanceView.ShowCornerText(gameTextSO.approachTextNPC);
             AudioManager.Instance.PlaySFX(approachAudioClip);
         }
-        else if (maintain)
+        else if (playerResult > 0)
         {
-            handDistanceView.ShowCornerText(gameTextSO.maintainText);
+            handDistanceView.ShowCornerText(gameTextSO.approachTextPlayer);
+            AudioManager.Instance.PlaySFX(approachAudioClip);
+        }
+        else if (npcResult == 0 && _currentTurnInitiator ==  TurnInitiator.NPC)
+        {
+            handDistanceView.ShowCornerText(gameTextSO.maintainTextNPC);
+        }
+        else if (playerResult == 0 && _currentTurnInitiator == TurnInitiator.Player)
+        {
+            handDistanceView.ShowCornerText(gameTextSO.maintainTextPlayer);
         }
 
         yield return YieldHelper.WaitForSeconds(2.0f);
 
         handDistanceView.HideCornerText();
-        dialogueUI.ClearChat();
 
         ConversationResult result = _affectionSystem.CheckConversationEnded();
         if (result != ConversationResult.None)
@@ -283,7 +296,9 @@ public class DialogueDirector : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
 
-        handDistanceView.ShowCenterText(result == ConversationResult.Good ? gameTextSO.goodEndText : gameTextSO.badEndText);
+        handDistanceView.ShowCenterText(result == ConversationResult.Good
+            ? gameTextSO.goodEndText
+            : gameTextSO.badEndText);
 
         ++_currentNPCIndex;
         if (_currentNPCIndex >= npcProfiles.Count)

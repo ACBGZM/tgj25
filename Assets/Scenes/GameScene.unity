@@ -478,6 +478,7 @@ MonoBehaviour:
   playerView: {fileID: 1350177446}
   npcView: {fileID: 55597021}
   dialogueDirector: {fileID: 1509770358}
+  approachAudioClip: {fileID: 8300000, guid: 0dc7d0c22be000e40b986b08cb55fee7, type: 3}
 --- !u!4 &175042438
 Transform:
   m_ObjectHideFlags: 0
