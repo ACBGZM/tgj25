@@ -50,6 +50,7 @@ public class DialogueUI : MonoBehaviour
             Button button = choiceButton.GetComponent<Button>();
             button.onClick.AddListener(() =>
             {
+                AudioManager.Instance.PlayButtonClickClip();
                 ClearChoices();
                 onSelect?.Invoke(index);
             });
@@ -90,11 +91,13 @@ public class DialogueUI : MonoBehaviour
 
         approachButton.onClick.AddListener(() =>
         {
+            AudioManager.Instance.PlayButtonClickClip();
             onApproach?.Invoke();
             conclusionPanel.SetActive(false);
         });
         withdrawButton.onClick.AddListener(() =>
         {
+            AudioManager.Instance.PlayButtonClickClip();
             onWithdraw?.Invoke();
             conclusionPanel.SetActive(false);
         });
@@ -107,6 +110,7 @@ public class DialogueUI : MonoBehaviour
         continueButton.onClick.RemoveAllListeners();
         continueButton.onClick.AddListener(() =>
         {
+            AudioManager.Instance.PlayButtonClickClip();
             onSelect?.Invoke();
             continueButton.gameObject.SetActive(false);
         });

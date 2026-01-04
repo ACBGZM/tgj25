@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using DataDefinition;
@@ -42,6 +41,10 @@ public class DialogueDirector : MonoBehaviour
     public int playerTopicOptionCount = 2;
     public GameTextSO gameTextSO;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip approachAudioClip;
+    [SerializeField] private AudioClip withdrawAudioClip;
+
     private NPCTurnSO _currentNPCTurn;
     private List<PlayerTurnSO> _currentPlayerTurnOptions;
     private PlayerChoice _selectedPlayerChoice;
@@ -79,6 +82,8 @@ public class DialogueDirector : MonoBehaviour
 
         _affectionSystem.Init(_currentNPC.handDistanceConfig);
         handDistanceView.Init(_currentNPC.npcHandSprites, _affectionSystem.PlayerLevel, _affectionSystem.NPCLevel);
+
+        AudioManager.Instance.PlayNPCBGM(_currentNPC.npcBGM);
 
         PlaySequence(ConversationIntroSequence());
     }
@@ -216,6 +221,9 @@ public class DialogueDirector : MonoBehaviour
         int npcResult = 0;
         int playerResult = 0;
 
+        int npcLevelFormer = _affectionSystem.NPCLevel;
+        int playerLevelFormer = _affectionSystem.PlayerLevel;
+
         if (_currentTurnInitiator == TurnInitiator.NPC)
         {
             npcResult = _affectionSystem.ResolveNPCTurn();
@@ -225,28 +233,36 @@ public class DialogueDirector : MonoBehaviour
             playerResult = _affectionSystem.ResolvePlayerTurn(_selectedConcludingChoice == ConcludingChoice.Approach);
         }
 
-        PlaySequence(ResolveSequence(npcResult, playerResult));
+        int npcLevelNew =  _affectionSystem.NPCLevel;
+        int playerLevelNew =  _affectionSystem.PlayerLevel;
+
+        PlaySequence(ResolveSequence(npcLevelNew - npcLevelFormer, playerLevelNew - playerLevelFormer));
     }
 
     private IEnumerator ResolveSequence(int npcResult, int playerResult)
     {
         handDistanceView.UpdateView(_affectionSystem.PlayerLevel, _affectionSystem.NPCLevel);
-        yield return YieldHelper.WaitForSeconds(1.0f);
+        bool withdraw = npcResult  < 0 || playerResult < 0;
+        bool apporach = npcResult > 0 || playerResult > 0;
+        bool maintain = npcResult == 0 || playerResult == 0;
 
-        if (npcResult == 0 && playerResult == 0)
+        if (withdraw)
+        {
+            handDistanceView.ShowCornerText(gameTextSO.withdrawText);
+            AudioManager.Instance.PlaySFX(withdrawAudioClip);
+        }
+        else if (apporach)
+        {
+            handDistanceView.ShowCornerText(gameTextSO.approachText);
+            AudioManager.Instance.PlaySFX(approachAudioClip);
+        }
+        else if (maintain)
         {
             handDistanceView.ShowCornerText(gameTextSO.maintainText);
         }
-        else if (npcResult == 1 || playerResult == 1)
-        {
-            handDistanceView.ShowCornerText(gameTextSO.approachText);
-        }
-        else if (npcResult == -1 || playerResult == -1)
-        {
-            handDistanceView.ShowCornerText(gameTextSO.withdrawText);
-        }
 
-        yield return new WaitForSeconds(2f);
+        yield return YieldHelper.WaitForSeconds(2.0f);
+
         handDistanceView.HideCornerText();
         dialogueUI.ClearChat();
 
@@ -274,6 +290,8 @@ public class DialogueDirector : MonoBehaviour
         {
             dialogueUI.ShowContinueButton(() =>
             {
+                AudioManager.Instance.StopNPCBGM();
+                AudioManager.Instance.PlayButtonClickClip();
                 ResetGame();
             });
             yield break;
@@ -281,6 +299,8 @@ public class DialogueDirector : MonoBehaviour
 
         dialogueUI.ShowContinueButton(() =>
         {
+            AudioManager.Instance.StopNPCBGM();
+            AudioManager.Instance.PlayButtonClickClip();
             StartConversation();
         });
     }

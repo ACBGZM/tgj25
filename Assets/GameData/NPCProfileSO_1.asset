@@ -22,3 +22,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0cc9d32d0e72f9c45b63e7d89c0b2f2a, type: 3}
   - {fileID: 21300000, guid: fb531dc7ed602044390061539ce2ac44, type: 3}
   - {fileID: 21300000, guid: 1aa214972c0850b41b3b4e938ea5dd46, type: 3}
+  npcBGM: {fileID: 8300000, guid: d18ed32953812bf4891e0396970963aa, type: 3}
