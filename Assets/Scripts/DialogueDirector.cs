@@ -36,6 +36,7 @@ public class DialogueDirector : MonoBehaviour
     public DialogueUI dialogueUI;
     private AffectionSystem _affectionSystem;
     public HandDistanceView handDistanceView;
+    public GameOpening gameOpening;
 
     [Header("Config")]
     public int playerTopicOptionCount = 2;
@@ -64,7 +65,7 @@ public class DialogueDirector : MonoBehaviour
     void Start()
     {
         InitData();
-        StartConversation();
+        // StartConversation();
     }
 
     private void InitData()
@@ -72,7 +73,7 @@ public class DialogueDirector : MonoBehaviour
         _affectionSystem = new AffectionSystem();
     }
 
-    private void StartConversation()
+    public void StartConversation()
     {
         _currentNPC = npcProfiles[_currentNPCIndex];
 
@@ -144,12 +145,6 @@ public class DialogueDirector : MonoBehaviour
         EnterResolve();
     }
 
-    private void OnNPCAnswerSelected(int index)
-    {
-        _selectedPlayerChoice = _currentNPCTurn.playerChoices[index];
-        EnterResponding();
-    }
-
     private void StartPlayerTurn()
     {
         _currentPlayerTurnOptions =
@@ -207,34 +202,6 @@ public class DialogueDirector : MonoBehaviour
         yield return YieldHelper.WaitUntil(() => concludingChoosen);
 
         EnterResolve();
-    }
-
-    private void OnPlayerTopicSelected(int index)
-    {
-        _selectedPlayerChoice = _currentPlayerTurnOptions[index].playerTopic;
-        EnterResponding();
-    }
-
-    private void EnterResponding()
-    {
-        if (_currentTurnInitiator == TurnInitiator.NPC)
-        {
-            EnterResolve();
-        }
-        else
-        {
-            EnterConcluding();
-        }
-    }
-
-    private void EnterConcluding()
-    {
-        currentState = DialogueState.PlayerConcluding;
-
-        dialogueUI.ShowConcluding(
-            onApproach: () => OnConcludingSelected(ConcludingChoice.Approach),
-            onWithdraw: () => OnConcludingSelected(ConcludingChoice.Withdraw)
-        );
     }
 
     private void OnConcludingSelected(ConcludingChoice choice)
@@ -302,16 +269,27 @@ public class DialogueDirector : MonoBehaviour
 
         handDistanceView.ShowCenterText(result == ConversationResult.Good ? gameTextSO.goodEndText : gameTextSO.badEndText);
 
+        ++_currentNPCIndex;
         if (_currentNPCIndex >= npcProfiles.Count)
         {
-            // todo: game over
+            dialogueUI.ShowContinueButton(() =>
+            {
+                ResetGame();
+            });
             yield break;
         }
 
         dialogueUI.ShowContinueButton(() =>
         {
-            _currentNPCIndex++;
             StartConversation();
         });
+    }
+
+    private void ResetGame()
+    {
+        _currentNPCIndex = 0;
+        handDistanceView.HideCenterText();
+
+        gameOpening.ResetGame();
     }
 }

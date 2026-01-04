@@ -65,19 +65,16 @@ public class ExcelDialogueImporter
             {
                 int baseCol = 3 + i * 3; // D / G / J
 
-                string option = Cell(table, row, baseCol);
-                string response = Cell(table, row, baseCol + 1);
-                string deltaStr = Cell(table, row, baseCol + 2);
+                string textPrompt = Cell(table, row, baseCol);
+                if (string.IsNullOrEmpty(textPrompt)) continue;
 
-                if (string.IsNullOrEmpty(option)) continue;
-
-                int delta = 0;
-                int.TryParse(deltaStr, out delta);
+                string textLine = Cell(table, row, baseCol + 1);
+                string response = Cell(table, row, baseCol + 2);
 
                 npcTurn.playerChoices.Add(new PlayerChoice
                 {
-                    textPrompt = option,
-                    textLine = option,
+                    textPrompt = textPrompt,
+                    textLine = textLine,
                     npcResponse = response,
                 });
             }
@@ -104,8 +101,6 @@ public class ExcelDialogueImporter
 
             string playerLine = Cell(table, row, 3); // D
             string npcResponse = Cell(table, row, 4); // E
-            int delta = 0;
-            int.TryParse(Cell(table, row, 5), out delta); // F
 
             var playerTurn = ScriptableObject.CreateInstance<PlayerTurnSO>();
             playerTurn.level = Convert.ToInt32(table.Rows[row][1]);
