@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519e9473a7ae1a74ca4eb88f1174f499, type: 3}
+  m_Name: NPCTurn_36
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.PlayerTurnSO
+  level: 2
+  playerTopic:
+    textPrompt: "\u957F\u60C5\u8FD8\u662F\u4E09\u5206\u949F\u70ED\u5EA6\uFF1F"
+    textLine: "\u5BF9\u4E8E\u4E00\u4E9B\u7231\u597D\uFF0C\u4F60\u4F1A\u957F\u671F\u5730\u53BB\u70ED\u7231\uFF0C\u8FD8\u662F\u7ECF\u5E38\u4E09\u5206\u949F\u70ED\u5EA6\u5462\uFF1F"
+    npcResponse: "\u6211\u53EF\u80FD\u662F\u540E\u8005\u5427\uFF1F\u5468\u671F\u4E00\u5E74\u5DE6\u53F3\uFF0C\u4ECA\u5E74\u559C\u6B22\u8FD9\u4E2A\u756A\u5267\uFF0C\u660E\u5E74\u53EF\u80FD\u5C31\u6362\u4E86\u3002"

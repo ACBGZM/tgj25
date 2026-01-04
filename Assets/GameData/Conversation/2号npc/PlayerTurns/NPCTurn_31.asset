@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519e9473a7ae1a74ca4eb88f1174f499, type: 3}
+  m_Name: NPCTurn_31
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.PlayerTurnSO
+  level: 2
+  playerTopic:
+    textPrompt: "\u4F60\u5BF9\u718A\u5B69\u5B50\u7684\u6001\u5EA6\u662F\uFF1F"
+    textLine: "\u5982\u679C\u5BB6\u91CC\u6765\u4E86\u718A\u5B69\u5B50\uFF0C\u4F60\u4F1A\u600E\u4E48\u53BB\u8DDF\u4ED6\u4EEC\u76F8\u5904\u5462\uFF1F"
+    npcResponse: "\u6211\u4F1A\u628A\u5367\u5BA4\u95E8\u9501\u6B7B...\u62B1\u6B49\uFF0C\u6211\u5BB6\u91CC\u6709\u5F88\u591A\u8D35\u91CD\u7684\u65F6\u5C1A\u5C0F\u5783\u573E..."

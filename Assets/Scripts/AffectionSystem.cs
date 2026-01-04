@@ -1,4 +1,5 @@
 
+using DataDefinition;
 using UnityEngine;
 
 public enum ConversationResult : uint

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f76c79ee172b384587fac758e609f63, type: 3}
   m_Name: NPCProfileSO_1
   m_EditorClassIdentifier: Assembly-CSharp::NPCProfileSO
-  npcTurnPool: {fileID: 11400000, guid: 9b1cf1d8211204440b6932d6bcba2fb4, type: 2}
-  playerTurnPool: {fileID: 11400000, guid: 7b25c7a480548b446bae12e4e98027bd, type: 2}
+  npcTurnPool: {fileID: 11400000, guid: 2d24fc0268602fe4d9a5b610152099e0, type: 2}
+  playerTurnPool: {fileID: 11400000, guid: cc0808e38c5f97a40a6adcc7400d0f36, type: 2}
   handDistanceConfig: {fileID: 11400000, guid: a2396e6489e96d549a920112306fac0c, type: 2}
   introText: 1111
   npcHandSprites:

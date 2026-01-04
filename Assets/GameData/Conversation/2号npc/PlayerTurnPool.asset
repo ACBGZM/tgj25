@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba88c11e5624a534cb20d7371758a0ec, type: 3}
+  m_Name: PlayerTurnPool
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.PlayerTurnPoolSO
+  playerTurns:
+  - {fileID: 11400000, guid: e14e3ac4dd8d04b469b2c83a3fd233c1, type: 2}
+  - {fileID: 11400000, guid: 0ab73d3c9529c0347b3eac0f60f296ff, type: 2}
+  - {fileID: 11400000, guid: f3cf64b7bbfea8c4e8260a99aba614d0, type: 2}
+  - {fileID: 11400000, guid: b64a9514109fb874ba503f76055668c9, type: 2}
+  - {fileID: 11400000, guid: 72c9b3f8353df2e4d99813a09f2c21db, type: 2}
+  - {fileID: 11400000, guid: 3d640b425d465ab4bbadf9f29f62e4c7, type: 2}
+  - {fileID: 11400000, guid: b271470ad71bf7b44bb885fabbedfe2f, type: 2}
+  - {fileID: 11400000, guid: d17d64fc170c8a9449df417915d4642b, type: 2}
+  - {fileID: 11400000, guid: 00eff892b3466074a973504f964b255b, type: 2}
+  - {fileID: 11400000, guid: 95778f7151ff983449c1b24b4d3dd31e, type: 2}
+  - {fileID: 11400000, guid: edda1a954eac9ee4f8e2eaee579bb08a, type: 2}
+  - {fileID: 11400000, guid: 990c28912b0328f4c88fc04789f245d9, type: 2}
+  - {fileID: 11400000, guid: a366324bac58cca4b835d7a35dfe292d, type: 2}
+  - {fileID: 11400000, guid: c7115fc1bed27cf4bad19a42ab259939, type: 2}
+  - {fileID: 11400000, guid: 6290f000dbc9adc4d8b1ce4cbebdc77d, type: 2}
+  - {fileID: 11400000, guid: 09adc24d012cb8745a9a023677f115c8, type: 2}
+  - {fileID: 11400000, guid: e841f578d96439b42b46075eb3a3f07c, type: 2}

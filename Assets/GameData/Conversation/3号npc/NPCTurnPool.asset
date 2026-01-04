@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2762715bcac7c4d468d77fd93ddcc246, type: 3}
+  m_Name: NPCTurnPool
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnPoolSO
+  npcTurns:
+  - {fileID: 11400000, guid: 703399df8a54c56489bd8f4955e9618a, type: 2}
+  - {fileID: 11400000, guid: 826d0f537e91ca74c8550aa0d6309eb9, type: 2}
+  - {fileID: 11400000, guid: 81bb62727c46ec248b92383cee541de6, type: 2}
+  - {fileID: 11400000, guid: fd5dc91f513972e43b9c2d13a8ddefce, type: 2}
+  - {fileID: 11400000, guid: e8de393b586687c45b4491587ba12eba, type: 2}
+  - {fileID: 11400000, guid: a1f5514ec15cc2e438d8faa384f1894d, type: 2}
+  - {fileID: 11400000, guid: 74aa04ce0c0492149a3a117a8292efe1, type: 2}
+  - {fileID: 11400000, guid: 8083de421d3370449a9df6d072860971, type: 2}
+  - {fileID: 11400000, guid: d1d5d937e1ebda04dba5de9f0983440f, type: 2}
+  - {fileID: 11400000, guid: 33b368e0d661395439c40c949dbc09ae, type: 2}
+  - {fileID: 11400000, guid: 54bc376de87aaea4c929da30b8144d2a, type: 2}
+  - {fileID: 11400000, guid: 315f4782829e4f84ba438d8d4484f8f0, type: 2}
+  - {fileID: 11400000, guid: 7d73a607e1919f549944a768c8036d6f, type: 2}
+  - {fileID: 11400000, guid: 7f2703721c9ec5549be5f9d0fd95a3fc, type: 2}
+  - {fileID: 11400000, guid: 23f2081d9090a4b4caf22170dd12a436, type: 2}

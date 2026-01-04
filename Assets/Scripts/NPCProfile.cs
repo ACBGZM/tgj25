@@ -1,3 +1,4 @@
+using DataDefinition;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NPCProfileSO", menuName = "Scriptable Objects/NPC Profile SO")]
