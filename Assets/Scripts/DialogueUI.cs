@@ -22,6 +22,7 @@ public class DialogueUI : MonoBehaviour
     public Button withdrawButton;
 
     [SerializeField] private Button continueButton;
+    [SerializeField] private Button restartButton;
 
     public void ShowNPCText(string text)
     {
@@ -109,6 +110,19 @@ public class DialogueUI : MonoBehaviour
 
         continueButton.onClick.RemoveAllListeners();
         continueButton.onClick.AddListener(() =>
+        {
+            AudioManager.Instance.PlayButtonClickClip();
+            onSelect?.Invoke();
+            continueButton.gameObject.SetActive(false);
+        });
+    }
+
+    public void ShowRestartButton(Action onSelect)
+    {
+        restartButton.gameObject.SetActive(true);
+
+        restartButton.onClick.RemoveAllListeners();
+        restartButton.onClick.AddListener(() =>
         {
             AudioManager.Instance.PlayButtonClickClip();
             onSelect?.Invoke();

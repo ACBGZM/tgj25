@@ -11,6 +11,7 @@ public class HandDistanceView : MonoBehaviour
     [SerializeField] private Image playerHandImage;
     [SerializeField] private Image npcHandImage;
 
+    [SerializeField] private GameObject centerTextImage;
     [SerializeField] private TextMeshProUGUI centerText;
     [SerializeField] private TextMeshProUGUI cornerText;
 
@@ -34,12 +35,14 @@ public class HandDistanceView : MonoBehaviour
 
     public void ShowCenterText(string text)
     {
+        centerTextImage.SetActive(true);
         centerText.gameObject.SetActive(true);
         centerText.text = text;
     }
 
     public void HideCenterText()
     {
+        centerTextImage.SetActive(false);
         centerText.gameObject.SetActive(false);
     }
 

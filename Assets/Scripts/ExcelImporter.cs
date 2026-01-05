@@ -25,7 +25,7 @@ public class ExcelDialogueImporter
             {
                 System.Data.DataTable sheet = dataSet.Tables[i];
                 ImportNPCSheet(sheet);
-                break;
+                // break;
             }
         }
 

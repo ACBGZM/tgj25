@@ -312,7 +312,7 @@ public class DialogueDirector : MonoBehaviour
         ++_currentNPCIndex;
         if (_currentNPCIndex >= npcProfiles.Count)
         {
-            dialogueUI.ShowContinueButton(() =>
+            dialogueUI.ShowRestartButton(() =>
             {
                 AudioManager.Instance.StopNPCBGM();
                 AudioManager.Instance.PlayButtonClickClip();

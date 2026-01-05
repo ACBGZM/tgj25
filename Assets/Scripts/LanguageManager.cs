@@ -6,7 +6,7 @@ public class LanguageManager : MonoBehaviour
 {
     public static LanguageManager Instance;
 
-    public Language CurrentLanguage { get; private set; } = Language.CN;
+    public Language CurrentLanguage { get; private set; } = Language.EN;
 
     private List<LocalizedText> listeners = new();
 
