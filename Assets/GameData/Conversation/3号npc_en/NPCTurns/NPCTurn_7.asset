@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_7
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 1
+  text: It's drizzling today. Do you prefer sunny or rainy days?
+  playerChoices:
+  - textPrompt: Sunny
+    textLine: It'll be a sunny day; the sunshine will make you feel warm.
+    npcResponse: Getting plenty of sunshine is good for your health.
+  - textPrompt: Rainy
+    textLine: I like rainy days, when I can stay at home and listen to the rain.
+    npcResponse: Time always seems to pass more slowly on rainy days.

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_14
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 2
+  text: In life, do you often find yourself unable to tolerate other people's hobbies?
+  playerChoices:
+  - textPrompt: YES
+    textLine: I've been through some... I've had hobbies that really affect other
+      people, and I just can't stand those.
+    npcResponse: Yeah, it's affecting other people...
+  - textPrompt: Not often
+    textLine: No, why should we interfere with other people's hobbies?
+    npcResponse: Okay, I understand...

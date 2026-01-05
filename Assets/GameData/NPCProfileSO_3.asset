@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f76c79ee172b384587fac758e609f63, type: 3}
   m_Name: NPCProfileSO_3
   m_EditorClassIdentifier: Assembly-CSharp::NPCProfileSO
-  npcTurnPool: {fileID: 11400000, guid: 49a55eaf32646794b94334f1101cd395, type: 2}
-  playerTurnPool: {fileID: 11400000, guid: 6786e567c49ce4049ac4e55af0fc3dab, type: 2}
+  dialoguePools:
+  - language: 0
+    npcTurnPool: {fileID: 11400000, guid: 49a55eaf32646794b94334f1101cd395, type: 2}
+    playerTurnPool: {fileID: 11400000, guid: 6786e567c49ce4049ac4e55af0fc3dab, type: 2}
+  - language: 1
+    npcTurnPool: {fileID: 11400000, guid: b57251e54b3f06c4aac24460522a1903, type: 2}
+    playerTurnPool: {fileID: 11400000, guid: 368135229f6aca84fbd514c10c2e32ff, type: 2}
   handDistanceConfig: {fileID: 11400000, guid: 84b7f6360c561cc44acc06f861cedcd6, type: 2}
-  introText: "\u4F60\u4EEC\u7684\u5BF9\u8BDD\u7ED3\u675F\u4E86\uFF0C\u518D\u603B\u6709\u65B0\u7684\u5BF9\u8BDD\u5373\u5C06\u5F00\u542F\uFF0C\u8FC7\u4E86\u4E00\u4F1A\u513F\uFF0C\u6709\u4EBA\u5750\u4E0B\u4E86\u3002"
+  introText: {fileID: 11400000, guid: 52f7db1e124e0464cb2115f21721c7da, type: 2}
   npcHandSprites:
   - {fileID: 21300000, guid: d85e626acb40ed7459074d531e65470a, type: 3}
   - {fileID: 21300000, guid: d1e57c7021783aa4891285a36c38f650, type: 3}

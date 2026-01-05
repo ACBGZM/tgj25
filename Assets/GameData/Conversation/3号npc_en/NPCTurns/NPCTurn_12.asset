@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_12
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 2
+  text: Do you hope your partner will be able to support you in the future, or would
+    you prefer to be independent and not interfere with each other?
+  playerChoices:
+  - textPrompt: Assist me
+    textLine: Life is so tough, not just with lovers, but with friends too. It would
+      be great if we could support each other.
+    npcResponse: There will be someone to support you.
+  - textPrompt: Let each be independent
+    textLine: I prefer a state where we are independent and don't interfere with
+      each other.
+    npcResponse: Well... everyone is growing in their own way.

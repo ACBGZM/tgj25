@@ -21,9 +21,11 @@ public class ExcelDialogueImporter
         {
             var dataSet = reader.AsDataSet();
 
-            foreach (System.Data.DataTable sheet in dataSet.Tables)
+            for (int i = 2; i < dataSet.Tables.Count; ++i)
             {
+                System.Data.DataTable sheet = dataSet.Tables[i];
                 ImportNPCSheet(sheet);
+                break;
             }
         }
 
@@ -44,7 +46,7 @@ public class ExcelDialogueImporter
         int row = 3;
 
         // ---------- NPC TURNS ----------
-        while (row < 19 && !IsRowEmpty(table, row))
+        while (row < 18 && !IsRowEmpty(table, row))
         {
             string npcText = Cell(table, row, 2); // C
             if (string.IsNullOrEmpty(npcText))
@@ -58,7 +60,7 @@ public class ExcelDialogueImporter
             npcTurn.text = npcText;
             npcTurn.playerChoices = new List<PlayerChoice>();
 
-            string npcTurnDir = $"Assets/GameData/Conversation/{npcName}/NPCTurns/";
+            string npcTurnDir = $"Assets/GameData/Conversation/{npcName}_en/NPCTurns/";
             Directory.CreateDirectory(npcTurnDir);
 
             for (int i = 0; i < 3; i++)
@@ -85,7 +87,7 @@ public class ExcelDialogueImporter
             AssetDatabase.CreateAsset(npcTurn, $"{npcTurnDir}/NPCTurn_{row}.asset");
         }
 
-        string playerTurnDir = $"Assets/GameData/Conversation/{npcName}/PlayerTurns/";
+        string playerTurnDir = $"Assets/GameData/Conversation/{npcName}_en/PlayerTurns/";
         Directory.CreateDirectory(playerTurnDir);
 
         row = 22;
@@ -117,7 +119,7 @@ public class ExcelDialogueImporter
             AssetDatabase.CreateAsset(playerTurn, $"{playerTurnDir}/NPCTurn_{row}.asset");
         }
 
-        string dir = $"Assets/GameData/Conversation/{npcName}";
+        string dir = $"Assets/GameData/Conversation/{npcName}_en";
         Directory.CreateDirectory(dir);
 
         AssetDatabase.CreateAsset(npcPool, $"{dir}/NPCTurnPool.asset");

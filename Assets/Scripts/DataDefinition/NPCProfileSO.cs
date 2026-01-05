@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace DataDefinition
@@ -6,19 +7,23 @@ namespace DataDefinition
     public class NPCProfileSO : ScriptableObject
     {
         [Header("Dialogue Pools")]
-        public NPCTurnPoolSO npcTurnPool;
-        public PlayerTurnPoolSO playerTurnPool;
+        public List<DialoguePoolByLanguage> dialoguePools;
 
         [Header("Hand Distance Config")]
         public HandDistanceConfigSO handDistanceConfig;
 
         [Header("Conversation Text")]
-        public string introText;
+        public LanguageTextSO introText;
 
         [Header("Hand Sprites")]
         public Sprite[] npcHandSprites;
 
         [Header("Audio")]
         public AudioClip npcBGM;
+
+        public DialoguePoolByLanguage GetPoolByLanguage(Language language)
+        {
+            return dialoguePools.Find(x => x.language == language);
+        }
     }
 }

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_9
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 1
+  text: Do you play games regularly? Including mobile games, PC games, and computer
+    games.
+  playerChoices:
+  - textPrompt: Mobile games
+    textLine: I play mobile games, which is more convenient.
+    npcResponse: Yes, you can make use of fragmented time.
+  - textPrompt: Computer games
+    textLine: My Steam game library is almost full, even though I've never opened
+      many of them...
+    npcResponse: Haha, after all, there are promotions every quarter...
+  - textPrompt: Not regularly
+    textLine: I don't play games much... I don't have much time and I don't particularly
+      want to play any.
+    npcResponse: You might be quite busy with work or studies.

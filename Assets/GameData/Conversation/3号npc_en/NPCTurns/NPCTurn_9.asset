@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_9
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 1
+  text: Do you have any hobbies that you've stuck with for a long time?
+  playerChoices:
+  - textPrompt: YES
+    textLine: Yes, if I fall in love with something, I can stick with it for several
+      years!
+    npcResponse: It seems you are very sentimental.
+  - textPrompt: NO
+    textLine: No, not really! I like to try a little bit of everything!
+    npcResponse: You should be able to learn a lot from that.

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_6
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 1
+  text: What do you like to eat? Are there any restaurants you particularly want
+    to visit?
+  playerChoices:
+  - textPrompt: Japanese food
+    textLine: Do you like Japanese restaurants? I've saved a Japanese restaurant
+      in my favorites that's nearby.
+    npcResponse: When you think of Japanese food, you probably think of salmon and
+      yakitori, right?
+  - textPrompt: Hot pot
+    textLine: It's gotten a bit colder lately, so I've saved a few hot pot restaurants
+      to my favorites.
+    npcResponse: It seems like we should eat something warm in this temperature.
+  - textPrompt: Northeastern Chinese food
+    textLine: I've recently become obsessed with Northeastern Chinese cuisine, it's
+      so delicious!
+    npcResponse: I saw on social media that their portion sizes were quite impressive.

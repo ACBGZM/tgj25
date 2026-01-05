@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_9
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 1
+  text: Have you ever felt extremely envious of a writer's talent? You know, that
+    feeling of "Wow, their writing is so amazing."
+  playerChoices:
+  - textPrompt: "Gabriel Garc\xEDa M\xE1rquez"
+    textLine: "That must be Gabriel Garc\xEDa M\xE1rquez and his novel One Hundred
+      Years of Solitude."
+    npcResponse: Ah, this is indeed a masterpiece of Latin American magical realism.
+  - textPrompt: "Gabriel Garc\xEDa M\xE1rquez"
+    textLine: "That must be Gabriel Garc\xEDa M\xE1rquez and his novel One Hundred
+      Years of Solitude."
+    npcResponse: I know that book of his, The Garden of Forking Paths.
+  - textPrompt: Virginia Woolf
+    textLine: Virginia, do you know how shocked I was when I finished watching Mrs.
+      Dalloway?
+    npcResponse: "Oh! I still have a fridge magnet with the words A Room of One\u2019s
+      Own on it."

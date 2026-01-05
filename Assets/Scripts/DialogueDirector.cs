@@ -91,7 +91,7 @@ public class DialogueDirector : MonoBehaviour
     private IEnumerator ConversationIntroSequence()
     {
         handDistanceView.Clear();
-        handDistanceView.ShowCenterText(_currentNPC.introText);
+        handDistanceView.ShowCenterText(LanguageManager.Instance.GetLanguageText(_currentNPC.introText));
         yield return YieldHelper.WaitForSeconds(3.0f);
         handDistanceView.HideCenterText();
 
@@ -115,7 +115,7 @@ public class DialogueDirector : MonoBehaviour
     private void StartNPCTurn()
     {
         currentState = DialogueState.NPCOpening;
-        _currentNPCTurn = RandomHelper.PickOne(_currentNPC.npcTurnPool.npcTurns);
+        _currentNPCTurn = RandomHelper.PickOne(_currentNPC.GetPoolByLanguage(LanguageManager.Instance.CurrentLanguage).npcTurnPool.npcTurns);
 
         PlaySequence(NPCTurnSequence());
     }
@@ -153,7 +153,7 @@ public class DialogueDirector : MonoBehaviour
     private void StartPlayerTurn()
     {
         _currentPlayerTurnOptions =
-            RandomHelper.PickRandomList(_currentNPC.playerTurnPool.playerTurns, playerTopicOptionCount);
+            RandomHelper.PickRandomList(_currentNPC.GetPoolByLanguage(LanguageManager.Instance.CurrentLanguage).playerTurnPool.playerTurns, playerTopicOptionCount);
 
         PlaySequence(PlayerTurnSequence());
     }
@@ -259,27 +259,27 @@ public class DialogueDirector : MonoBehaviour
 
         if (npcResult < 0)
         {
-            handDistanceView.ShowCornerText(gameTextSO.withdrawTextNPC);
+            handDistanceView.ShowCornerText(LanguageManager.Instance.GetLanguageText(gameTextSO.withdrawTextNPC));
         }
         else if (playerResult < 0)
         {
-            handDistanceView.ShowCornerText(gameTextSO.withdrawTextPlayer);
+            handDistanceView.ShowCornerText(LanguageManager.Instance.GetLanguageText(gameTextSO.withdrawTextPlayer));
         }
         else if (npcResult > 0)
         {
-            handDistanceView.ShowCornerText(gameTextSO.approachTextNPC);
+            handDistanceView.ShowCornerText(LanguageManager.Instance.GetLanguageText(gameTextSO.approachTextNPC));
         }
         else if (playerResult > 0)
         {
-            handDistanceView.ShowCornerText(gameTextSO.approachTextPlayer);
+            handDistanceView.ShowCornerText(LanguageManager.Instance.GetLanguageText(gameTextSO.approachTextPlayer));
         }
         else if (npcResult == 0 && _currentTurnInitiator ==  TurnInitiator.NPC)
         {
-            handDistanceView.ShowCornerText(gameTextSO.maintainTextNPC);
+            handDistanceView.ShowCornerText(LanguageManager.Instance.GetLanguageText(gameTextSO.maintainTextNPC));
         }
         else if (playerResult == 0 && _currentTurnInitiator == TurnInitiator.Player)
         {
-            handDistanceView.ShowCornerText(gameTextSO.maintainTextPlayer);
+            handDistanceView.ShowCornerText(LanguageManager.Instance.GetLanguageText(gameTextSO.maintainTextPlayer));
         }
 
         yield return YieldHelper.WaitForSeconds(2.0f);
@@ -304,8 +304,8 @@ public class DialogueDirector : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
 
         handDistanceView.ShowCenterText(result == ConversationResult.Good
-            ? gameTextSO.goodEndText
-            : gameTextSO.badEndText);
+            ? LanguageManager.Instance.GetLanguageText(gameTextSO.goodEndText)
+            : LanguageManager.Instance.GetLanguageText(gameTextSO.badEndText));
 
         ++_currentNPCIndex;
         if (_currentNPCIndex >= npcProfiles.Count)

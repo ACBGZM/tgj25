@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_12
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 2
+  text: Where are you planning to go after our date ends?
+  playerChoices:
+  - textPrompt: Go home
+    textLine: I'm a little tired today, I just want to go home and lie down...
+    npcResponse: Okay. Then you should get some rest.
+  - textPrompt: Hang out around
+    textLine: Since finally getting out of home, I'd like to wander around and kill
+      the whole day.
+    npcResponse: Yes, the weather is quite nice today.

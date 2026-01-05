@@ -1,4 +1,4 @@
-using System.Collections;
+using DataDefinition;
 using UnityEngine;
 using DG.Tweening;
 
@@ -41,5 +41,13 @@ public class GameOpening : MonoBehaviour
 
         playerView.DOFade(0, 1.0f);
         npcView.DOFade(0, 1.0f);
+    }
+
+    public void OnClickSwitchLanguage()
+    {
+        var lm = LanguageManager.Instance;
+        lm.SwitchLanguage(
+            lm.CurrentLanguage == Language.CN ? Language.EN : Language.CN
+        );
     }
 }

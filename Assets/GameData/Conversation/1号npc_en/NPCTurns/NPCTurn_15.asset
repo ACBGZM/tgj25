@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_15
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 2
+  text: 'Since we may be spending more time together in the future, I''d like to
+    ask you which do you think is more important: differences or commonalities between
+    two people?'
+  playerChoices:
+  - textPrompt: Differences
+    textLine: Differences are what create the desire to communicate, right? And wouldn't
+      it be terrifying if two people were exactly the same, like looking in a mirror?
+    npcResponse: Upon closer examination, no two people are exactly alike.
+  - textPrompt: Commonalities
+    textLine: We need to have something in common to be able to have fun together.
+    npcResponse: We only notice each other when our paths cross.

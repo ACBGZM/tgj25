@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519e9473a7ae1a74ca4eb88f1174f499, type: 3}
+  m_Name: NPCTurn_29
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.PlayerTurnSO
+  level: 1
+  playerTopic:
+    textPrompt: How to balance work and life?
+    textLine: After starting work, do you find it difficult to balance work and life?
+      How do you do it?
+    npcResponse: Actually, for me, a change of location simply means a shift in my
+      physical functions, so there's not much need for balance...

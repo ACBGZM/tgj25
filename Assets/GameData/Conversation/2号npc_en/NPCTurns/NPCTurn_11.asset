@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_11
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 2
+  text: Chinese animation has been quite popular lately, have you watched any?
+  playerChoices:
+  - textPrompt: I watched The Legend of HEI.
+    textLine: I watched Luo Xiaohei! I especially like this kind of animated film
+      that doesn't preach.
+    npcResponse: I also watched it.
+  - textPrompt: I watched Ne Zha.
+    textLine: I watched Ne Zha! A box office revenue of 2.1 billion US dollars is
+      so awesome!
+    npcResponse: Yes, it's a significant milestone in film history.
+  - textPrompt: I didn't watch it.
+    textLine: I haven't watched any of them; I'm not very interested in domestically
+      produced animation.
+    npcResponse: Oh, I see.

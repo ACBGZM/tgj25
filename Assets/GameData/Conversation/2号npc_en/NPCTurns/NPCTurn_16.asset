@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_16
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 2
+  text: Are you prone to internal conflict when interacting with others?
+  playerChoices:
+  - textPrompt: YES
+    textLine: I'm the kind of person who's prone to internal conflict, so I tend
+      to act based on what others think.
+    npcResponse: Perhaps you care too much about other people's feelings.
+  - textPrompt: NO
+    textLine: I'm not prone to internal conflict; rather than reflecting on myself...
+    npcResponse: Why not blame others?

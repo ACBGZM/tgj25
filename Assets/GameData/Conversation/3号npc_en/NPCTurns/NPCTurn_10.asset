@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_10
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 2
+  text: May I ask which type is closer to your ideal type?
+  playerChoices:
+  - textPrompt: gentle and considerate
+    textLine: A gentle and considerate person!
+    npcResponse: The kind that cares about people.
+  - textPrompt: Cheerful and opinionated
+    textLine: I like cheerful people who are assertive and don't ask me about everything.
+    npcResponse: An independent and self-reliant person.
+  - textPrompt: Excellent background
+    textLine: I'm rather materialistic; I value a person's education or work background.
+    npcResponse: This is certainly one way to make a judgment.

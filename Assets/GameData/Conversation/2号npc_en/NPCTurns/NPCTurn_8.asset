@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_8
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 1
+  text: Are there any good places to visit nearby? Can you recommend some?
+  playerChoices:
+  - textPrompt: Theme Park
+    textLine: There's a theme park just one subway stop away nearby, and it seems
+      there's a flower show there too.
+    npcResponse: A flower show? You know so much!
+  - textPrompt: Vintage store
+    textLine: There seems to be a very famous vintage clothing store next door; I
+      often see it on Xiaohongshu (a Chinese social media platform).
+    npcResponse: This whole street seems to be full of shops with this kind of atmosphere.
+  - textPrompt: Anime Mall
+    textLine: Hey, are you going to the "Dimensional Factory"? It's not far from
+      here, there's an anime-themed shopping mall.
+    npcResponse: Oh, I never heard it.

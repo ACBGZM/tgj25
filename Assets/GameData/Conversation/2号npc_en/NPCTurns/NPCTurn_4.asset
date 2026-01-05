@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_4
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 1
+  text: Can I ask about your hobbies? Just name one.
+  playerChoices:
+  - textPrompt: Fiteness
+    textLine: I got a gym membership and go every week. I've been working on my glutes
+      and legs lately.
+    npcResponse: What a healthy hobby!
+  - textPrompt: Watching dramas
+    textLine: I love watching TV shows! Lately I've been rewatching Stranger Things
+      and Empresses in the Palace.
+    npcResponse: Those are truly classical!
+  - textPrompt: Playing games
+    textLine: I bought a PS5 and have been obsessed with Legacy of Hogwarts lately.
+    npcResponse: Oh right, The Legacy of Hogwarts is on sale right now.

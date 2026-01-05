@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_4
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 1
+  text: Do you like the atmosphere here?
+  playerChoices:
+  - textPrompt: YES
+    textLine: It's quite quiet here, which I like.
+    npcResponse: This place does indeed have low customer traffic.
+  - textPrompt: NO
+    textLine: To be honest, it's a bit too quiet here.
+    npcResponse: This place does indeed have low customer traffic.
+  - textPrompt: It doesn't matter
+    textLine: It's fine, I think either way is fine.
+    npcResponse: OK

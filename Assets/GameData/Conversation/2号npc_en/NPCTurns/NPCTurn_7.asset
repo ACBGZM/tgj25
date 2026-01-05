@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_7
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 1
+  text: I don't come to cafe like this often. Do you like this place?
+  playerChoices:
+  - textPrompt: YES
+    textLine: I quite like the atmosphere of this cafe.
+    npcResponse: Hmm, the decor feels quite unique.
+  - textPrompt: NO
+    textLine: "Can I be honest\u2014I don't really like the atmosphere of this cafe."
+    npcResponse: Of course you can tell the truth! Then I won't choose this place
+      next time.

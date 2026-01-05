@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_16
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 2
+  text: Would you mind if your partner had different opinions on certain things?
+  playerChoices:
+  - textPrompt: YES
+    textLine: I'm quite concerned about this because it could lead to arguments.
+    npcResponse: Hmm... if both parties feel this is an important topic.
+  - textPrompt: NO
+    textLine: I don't mind; it's impossible for everyone to think exactly the same
+      way!
+    npcResponse: It's impossible for them to be exactly the same.
+  - textPrompt: It depends
+    textLine: "It depends... They'll definitely be very concerned about issues involving
+      values \u200B\u200Band beliefs."
+    npcResponse: "Hmm... having the right values \u200B\u200Bis very important."

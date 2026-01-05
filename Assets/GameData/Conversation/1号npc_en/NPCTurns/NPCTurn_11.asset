@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_11
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 2
+  text: Where do you usually go when you go out for fun?
+  playerChoices:
+  - textPrompt: Bar
+    textLine: Bars are lively and crowded.
+    npcResponse: I have a funny friend who goes to bars to listen to music.
+  - textPrompt: bookstore
+    textLine: Bookstores are quieter; I'd go there to write papers or browse books.
+    npcResponse: Excellent academic work!
+  - textPrompt: Amusement park
+    textLine: Let's go to the amusement park with friends. I even bought an annual
+      pass to queue for the interactive rides.
+    npcResponse: Don't you think that "role-playing" has a strong philosophical undertone?

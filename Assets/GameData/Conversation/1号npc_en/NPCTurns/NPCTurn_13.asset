@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_13
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 2
+  text: "This coffee shop is actually just average in quality; it relies entirely
+    on marketing. I wonder if it's a bit strange to ask this\u2014what are your thoughts
+    on consumerism?"
+  playerChoices:
+  - textPrompt: Bad thing
+    textLine: It made me very sensitive and vigilant.
+    npcResponse: Hmm...a feeling of being coerced?
+  - textPrompt: Hallucination
+    textLine: Just like how the two of us ultimately chose this coffee shop.
+    npcResponse: Yes, the impact is real.
+  - textPrompt: No thoughts
+    textLine: As a small individual, I think I don't have much to say about the overall
+      environment.
+    npcResponse: The more lucid we are, the more pain we experience?

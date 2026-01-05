@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e68a87857f3f048bbb515bbf57cfb9, type: 3}
+  m_Name: NPCTurn_18
+  m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
+  level: 2
+  text: Journaling is very popular now. Do you have the habit of keeping a diary?
+  playerChoices:
+  - textPrompt: YES
+    textLine: I've recently been forcing myself to write a page in my diary every
+      day.
+    npcResponse: You have great endurance.
+  - textPrompt: No
+    textLine: I don't feel like it's pointless if I write it.
+    npcResponse: Fewer people keep diaries today.
+  - textPrompt: Occasionally
+    textLine: I bought a notebook, but I often only write diaries sporadically.
+    npcResponse: Perhaps you could make a schedule.
