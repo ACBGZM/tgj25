@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f6073e78ef17443835259032f08718, type: 3}
   m_Name: PlayerMaintain
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.LanguageTextSO
-  chinese: "\u73A9\u5BB6\u4FDD\u6301"
-  english: Player Maintain
+  chinese: "\u4F60\u5DF2\u5C55\u73B0\u51FA\u6700\u4EB2\u8FD1\u7684\u53EF\u80FD\u6027\uFF0C\u63A5\u4E0B\u6765...\u4E00\u5207\u53D6\u51B3\u4E8E\u4F60\u3002"
+  english: "You\u2019ve extended the closest possibility of intimacy you can offer.
+    From here... It\u2019s all up to them."

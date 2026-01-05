@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: GoodEnd
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.LanguageTextSO
   chinese: "\u4F60\u4EEC\u5728\u95E8\u53E3\u7684\u98CE\u94C3\u58F0\u548C\u6C89\u9759\u7684\u547C\u5438\u4E2D\u5BF9\u89C6\u2014\u2014\u4F60\u4EEC\u4E4B\u95F4\u7684\u786E\u6709\u67D0\u79CD\u4E1C\u897F\u53D1\u751F\u4E86\u6539\u53D8\uFF0C\u53EF\u7231\u60C5\u5C0F\u8BF4\u91CC\u7684\u98D3\u98CE\u4F1A\u5411\u8FD9\u95F4\u666E\u901A\u7684\u5496\u5561\u9986\u5E2D\u5377\u800C\u6765\u5417\uFF1F\u4F60\u4EEC\u4E0D\u77E5\u9053\uFF0C\u4F46\u4F60\u4EEC\u4F38\u51FA\u624B\uFF0C\u5982\u6B64\u671F\u5F85\u7740\u3002"
-  english: GoodEnd
+  english: "You two gaze at each other to the sound of wind chimes at the door and
+    each other's calm breaths\u2014something between you has undoubtedly changed.
+    Yet, will the whirlwind from romance novels truly sweep into this ordinary caf\xE9?
+    You don't know, but you reach out your hands, hoping exactly for that."

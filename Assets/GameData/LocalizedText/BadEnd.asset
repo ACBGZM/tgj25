@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: BadEnd
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.LanguageTextSO
   chinese: "\u4F60\u4EEC\u5728\u5496\u5561\u673A\u7684\u566A\u97F3\u548C\u9694\u58C1\u684C\u67AF\u71E5\u7684\u952E\u76D8\u58F0\u4E2D\u5BF9\u89C6\u2014\u2014\u4F60\u4EEC\u4E4B\u95F4\u4EFF\u4F5B\u6709\u67D0\u6761\u672C\u5C31\u4E0D\u660E\u6670\u7684\u7EC6\u7EBF\u65AD\u88C2\u4E86\uFF0C\u4E0D\u8FC7\u6CA1\u5173\u7CFB\uFF0C\u4F60\u77E5\u9053\uFF0C\u4F60\u5F97\u5766\u7136\u63A5\u53D7\u5E73\u884C\u7EBF\u4E4B\u5FC5\u8981\u3002"
-  english: BadEnd
+  english: "You two gaze at each other amid the whir of the coffee machine and the
+    dull clatter of keyboards from the next table\u2014it feels as if a faint, indistinct
+    thread between you has snapped. But it's alright. You know you must calmly accept
+    the necessity of parallel lines."

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: NPCApproach
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.LanguageTextSO
   chinese: "\u5BF9\u65B9\u7684\u624B\u5F80\u524D\u4F38\u4E86\u4F38\uFF0C\u4F60\u4EEC\u7684\u8DDD\u79BB\u66F4\u8FD1\u4E86\u4E00\u4E9B\u3002"
-  english: NPC Approach
+  english: Their hands stretches forward a little. The distance between you closes
+    slightly.
