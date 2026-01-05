@@ -16,4 +16,5 @@ MonoBehaviour:
   playerTopic:
     textPrompt: What qualities do you value most in your partner?
     textLine: What quality in your partner makes you feel "it's so great"?
-    npcResponse: Perhaps it's the aspect of "honesty".
+    npcResponse: I think it would have to be "sincerity." It's a rare and beautiful
+      quality, isn't it?

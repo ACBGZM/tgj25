@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: NPCTurn_8
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 1
-  text: Have you ever been to an immersive theater performance? I'm curious about
-    your thoughts on this format.
+  text: Have you experienced immersive theater? I'm curious if you find the medium
+    truly avant-garde or just gimmicky.
   playerChoices:
-  - textPrompt: Enjoy
-    textLine: Domestically, I quite like Sleep No More and Stolen Heart.
+  - textPrompt: Like
+    textLine: Back home, I quite like Sleep No More and Stolen Heart.
     npcResponse: Oh, those two are indeed quite famous in mainland China.
   - textPrompt: Dislike
-    textLine: I don't watch much theater, and immersive theater feels a bit like
-      a novelty to me.
-    npcResponse: Yes, domestic dramas are a bit too formalistic.
+    textLine: I don't really go to the theater much, so immersive stuff feels like
+      a bit of a gimmick to me.
+    npcResponse: "yeah, a lot of domestic plays feel a bit\u2026 formalistic."

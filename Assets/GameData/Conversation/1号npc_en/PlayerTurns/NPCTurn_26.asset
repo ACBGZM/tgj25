@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.PlayerTurnSO
   level: 1
   playerTopic:
-    textPrompt: Do you enjoy going to exhibitions?
-    textLine: Do you usually enjoy going to art exhibitions or museums?
-    npcResponse: I follow some accounts that compile exhibition summaries, and I
-      try to attend two or three exhibitions every month when I have some free time.
+    textPrompt: Do you like going to exhibitions?
+    textLine: Do you like hitting up art galleries or museums?
+    npcResponse: "I basically plan my weekends around them. I make it a point to
+      hit at least two or three galleries a month\u2014it's like a 'sensory maintenance'
+      for me."

@@ -16,5 +16,5 @@ MonoBehaviour:
   playerTopic:
     textPrompt: Do you like sports?
     textLine: Do you usually do some sports?
-    npcResponse: I swim and play baseball! Basically once a week. If you're interested,
-      we can go to the batting stadium together next time!
+    npcResponse: "I'm quite into swimming and baseball! I go once a week\u2014if
+      you're interested, I'd love to take you to the batting cages sometime."

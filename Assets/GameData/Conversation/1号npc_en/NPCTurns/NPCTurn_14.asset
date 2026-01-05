@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: NPCTurn_14
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: Actually, I sometimes have internal struggles, wondering what kind of person
-    I really am. What about you?
+  text: "I tend to overthink things a lot\u2014you know, like constantly questioning
+    who I really am. Do you ever get into those weird, deep headspaces?"
   playerChoices:
   - textPrompt: Me too
-    textLine: I feel the same, but there's nothing wrong with always being aware
-      that we are just ordinary person.
+    textLine: I get that. But honestly, I think it's fine to just accept that we're
+      pretty ordinary.
     npcResponse: Don't have too many expectations of ourselves.
-  - textPrompt: I won't
-    textLine: I'm not someone who easily gets internally conflicted; rather than
-      reflecting on myself, I tend to blame others.
-    npcResponse: Haha, you're so carefree.
+  - textPrompt: No
+    textLine: Not really. I don't really do 'inner conflict'.Rather than reflecting
+      on myself, I tend to blame others.
+    npcResponse: Haha, I wish I had your mindset. You're so chill.

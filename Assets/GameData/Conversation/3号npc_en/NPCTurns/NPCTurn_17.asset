@@ -13,14 +13,13 @@ MonoBehaviour:
   m_Name: NPCTurn_17
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: Whether it's friends or lovers, do you prefer to stay in touch online or
-    meet in person?
+  text: Whether it's friends or partners, do you prefer talk online or offline?
   playerChoices:
   - textPrompt: Online
-    textLine: I find it more convenient to express my feelings by sending messages
+    textLine: I think it more convenient to express my feelings by sending messages
       online.
     npcResponse: It will be faster.
   - textPrompt: Offline
     textLine: Of course we should meet in person! I'm afraid I won't be able to express
-      myself clearly.
+      myself clearly online.
     npcResponse: Language can create barriers.

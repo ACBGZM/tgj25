@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.PlayerTurnSO
   level: 2
   playerTopic:
-    textPrompt: What do you usually do on weekends?
-    textLine: What do you do when you're alone on the weekend? Stay at home or go
-      out?
-    npcResponse: Go to a coffee shop to read a book or document, then go to a boutique,
-      and then have a meal at a nice restaurant.
+    textPrompt: What's your typical weekend like?
+    textLine: What's your typical weekend like? Stay at home or go out?
+    npcResponse: I usually tuck myself away in a cafe to dive into some reading,
+      hit up a few boutiques, and end the day with a nicely curated dinner.

@@ -16,5 +16,5 @@ MonoBehaviour:
   playerTopic:
     textPrompt: Do you like dessert?
     textLine: I see you ordered macarons. Do you have a sweet tooth?
-    npcResponse: I like the feeling that pastries and similar things have a very
-      elaborate and luxurious feel to them.
+    npcResponse: I think the dessert and similar things have a very elaborate and
+      luxurious feel to them.

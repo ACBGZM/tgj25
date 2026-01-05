@@ -15,7 +15,7 @@ MonoBehaviour:
   level: 1
   playerTopic:
     textPrompt: Do you bring negative emotions home?
-    textLine: Do you bring negative emotions from work home and hold grudges against
-      yourself?
-    npcResponse: I consider myself a pretty good person at coping, so this situation
-      doesn't happen often.
+    textLine: Do you often bring negative emotions from work home and hold grudges
+      against yourself?
+    npcResponse: I like to think I manage my emotions fairly well; losing control
+      isn't something that happens often with me.

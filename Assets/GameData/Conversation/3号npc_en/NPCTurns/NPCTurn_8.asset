@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: NPCTurn_8
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 1
-  text: Are you very busy with work or studies? How do you usually manage to cope?
+  text: "Is your schedule quite demanding lately? I'm curious\u2014how do you find
+    time to unwind and take care of yourself?"
   playerChoices:
   - textPrompt: Keep a calm mind
     textLine: For things that can't be changed, I think the only thing to do is to

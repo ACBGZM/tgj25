@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: NPCTurn_18
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: Journaling is very popular now. Do you have the habit of keeping a diary?
+  text: Journaling is kind of having a moment again. Do you actually keep a diary?
   playerChoices:
-  - textPrompt: YES
-    textLine: I've recently been forcing myself to write a page in my diary every
-      day.
+  - textPrompt: Yes
+    textLine: I've recently been forcing myself to fill a page every day lately.
     npcResponse: You have great endurance.
   - textPrompt: No
-    textLine: I don't feel like it's pointless if I write it.
-    npcResponse: Fewer people keep diaries today.
-  - textPrompt: Occasionally
-    textLine: I bought a notebook, but I often only write diaries sporadically.
-    npcResponse: Perhaps you could make a schedule.
+    textLine: Not really. I just feel like it's kind of pointless for me.
+    npcResponse: Yeah,fewer people keep diaries today.
+  - textPrompt: Sometimes
+    textLine: I bought a nice notebook for it, but I only actually write in it on
+      and off.
+    npcResponse: Maybe you should try setting a schedule for it.

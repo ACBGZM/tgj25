@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: NPCTurn_13
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: I don't actually date people very often, so I'm a little nervous. Are you
-    nervous?
+  text: Actually, I don't go on dates very often, so I'm a little nervous... Are
+    you feeling so as me?
   playerChoices:
-  - textPrompt: YES
-    textLine: I don't date very often, so if I've said anything wrong...
-    npcResponse: No way! We were just chatting, there's no right or wrong.
-  - textPrompt: NO
-    textLine: It's alright for me; I'm quite good at dealing with people.
-    npcResponse: That's amazing!
+  - textPrompt: Yes
+    textLine: Same. So if I've said anything wrong...
+    npcResponse: That's alright. We were just chatting, there's No right or wrong.
+  - textPrompt: No
+    textLine: It's okay for me. I'm quite good at dealing with people.
+    npcResponse: Cool.

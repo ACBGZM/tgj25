@@ -16,8 +16,8 @@ MonoBehaviour:
   text: It's drizzling today. Do you prefer sunny or rainy days?
   playerChoices:
   - textPrompt: Sunny
-    textLine: It'll be a sunny day; the sunshine will make you feel warm.
-    npcResponse: Getting plenty of sunshine is good for your health.
+    textLine: It must be a sunny day! The sunshine makes me feel warm.
+    npcResponse: It is aslo good for our health.
   - textPrompt: Rainy
-    textLine: I like rainy days, when I can stay at home and listen to the rain.
-    npcResponse: Time always seems to pass more slowly on rainy days.
+    textLine: I like rainy days, cuz I can stay at home and listen to the rain.
+    npcResponse: Time always seems to pass more slowly on rainy days, right?

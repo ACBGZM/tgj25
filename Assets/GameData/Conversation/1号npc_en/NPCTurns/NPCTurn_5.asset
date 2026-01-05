@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: NPCTurn_5
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 1
-  text: Do you usually enjoy watching movies?
+  text: Are you into cinema? Or do you just "watch movies"?
   playerChoices:
-  - textPrompt: YES
+  - textPrompt: Yes
     textLine: I like both theatrical releases and niche films.
     npcResponse: I quite like Tarkovsky's films.
-  - textPrompt: NO
+  - textPrompt: No
     textLine: Well, actually I'm not particularly interested in movies, but if a
       friend asks me to watch one with them, that's fine with me.
     npcResponse: Oh, I see.

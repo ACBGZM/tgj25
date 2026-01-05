@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.PlayerTurnSO
   level: 1
   playerTopic:
-    textPrompt: Can you recommend some books to me?
-    textLine: Can you recommend a book that you've read many times?
-    npcResponse: I'm not entirely sure if we have the same tastes, but I would recommend
-      1984.
+    textPrompt: Could you recommend some books to me?
+    textLine: Could you recommend a book that you've read many times?
+    npcResponse: I'm not sure if we're on the same page taste-wise, but I'd have
+      to say 1984. It's a classic for a reason.

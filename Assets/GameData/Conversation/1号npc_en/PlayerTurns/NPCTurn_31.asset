@@ -15,6 +15,6 @@ MonoBehaviour:
   level: 2
   playerTopic:
     textPrompt: Do you smoke or drink?
-    textLine: 'This may be a rather personal question, but I''d like to ask first:
-      do you smoke or drink?'
-    npcResponse: If I said yes, would you hesitate? Actually, I can quit.
+    textLine: "A bit of a personal one, \u2026 do you smoke or drink at all?"
+    npcResponse: If I say yeah, are you gonna judge me? Because honestly, I could
+      stop whenever. It's just a matter of choice.

@@ -15,6 +15,6 @@ MonoBehaviour:
   level: 2
   playerTopic:
     textPrompt: Where would you like to go on your next trip?
-    textLine: Do you enjoy traveling? Is there anywhere you'd like to travel to for
-      your next trip?
-    npcResponse: Otaru, Japan, is beautiful in the snow.
+    textLine: Do you like traveling? Anywhere you're dying to go for your next trip?
+    npcResponse: Otaru, in Japan. There's a certain poetic desolation to it when
+      it's blanketed in snow.

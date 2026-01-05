@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: NPCTurn_18
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: If you have a disagreement with someone close to you, do you talk it out
-    face-to-face?
+  text: When a disagreement arises with your partner, do you prefer to address it
+    directly, or to ake some time to process it first?
   playerChoices:
   - textPrompt: Face to face.
     textLine: Address the issue face-to-face immediately. Many relationships are
@@ -22,5 +22,5 @@ MonoBehaviour:
     npcResponse: Of course, irreparable is the worst-case scenario...
   - textPrompt: Talk after we calm down
     textLine: Let's calm down first. Maybe after a while we'll both realize there's
-      no need to argue.
+      No need to argue.
     npcResponse: This is also to avoid conflict.

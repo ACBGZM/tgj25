@@ -15,5 +15,6 @@ MonoBehaviour:
   level: 1
   playerTopic:
     textPrompt: Do you have a habit of writing?
-    textLine: Do you enjoy writing? Whether it's novels, essays, or diaries.
-    npcResponse: I keep a diary and also write movie reviews and essays on Douban.
+    textLine: Are you into writing at all? Like stories, essays, or just journaling?
+    npcResponse: I'm pretty disciplined with my journaling. I also post some reviews
+      and fragmented thoughts over on my blog.

@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: NPCTurn_9
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 1
-  text: Do you have any hobbies that you've stuck with for a long time?
+  text: Do you have a hobby or a passion that's been with you for a long time? I'd
+    love to hear about it.
   playerChoices:
-  - textPrompt: YES
+  - textPrompt: Yes
     textLine: Yes, if I fall in love with something, I can stick with it for several
       years!
     npcResponse: It seems you are very sentimental.
-  - textPrompt: NO
-    textLine: No, not really! I like to try a little bit of everything!
-    npcResponse: You should be able to learn a lot from that.
+  - textPrompt: No
+    textLine: No, Not really! I like to try a little bit of everything!
+    npcResponse: It seems cool.

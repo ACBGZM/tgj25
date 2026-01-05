@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.PlayerTurnSO
   level: 1
   playerTopic:
-    textPrompt: Do you have an idol you admire?
-    textLine: I don't know if you follow celebrities or not, do you have any favorite
-      idols or singers?
-    npcResponse: That has to be  Lana Del Rey.
+    textPrompt: Got a favorite celeb?
+    textLine: Do you follow any celebs? Or maybe some influencers or artists you're
+      really into?
+    npcResponse: Definitely Lana Del Rey. Her whole 'melancholic vibe' is just...
+      on another level. No one else even comes close.

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: NPCTurn_17
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: I think you look great today! Do you usually pay a lot of attention to your
-    outfits?
+  text: I think your outfit today is so pretty! Do you spend time picking out what
+    to wear?
   playerChoices:
-  - textPrompt: YES
-    textLine: Yes, I usually dress according to a theme.
-    npcResponse: I think she could be a fashion blogger.
-  - textPrompt: NO
+  - textPrompt: Yes
+    textLine: Yes, I usually dress up.
+    npcResponse: I think you could be a fashion blogger.
+  - textPrompt: No
     textLine: No, I'm pretty casual.
     npcResponse: You have a real talent for fashion!

@@ -17,5 +17,5 @@ MonoBehaviour:
     textPrompt: Are you usually busy with work?
     textLine: Are you very busy with work? I saw on your SNS that you were working
       overtime until the early hours of the morning.
-    npcResponse: Version release days are indeed a bit hectic, but there's overtime
-      pay, so it's bearable...
+    npcResponse: It's been a bit overwhelming lately, but with the overtime pay,
+      I'd say it's a manageable sacrifice... at least for now.

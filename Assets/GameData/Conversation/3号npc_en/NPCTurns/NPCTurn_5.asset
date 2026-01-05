@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: NPCTurn_5
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 1
-  text: Don't you feel pressured about this kind of date?
+  text: Does a meeting like this make you a little pressured? I'd hate for you to
+    feel any burden because of today.
   playerChoices:
   - textPrompt: A little
     textLine: Actually, there is a reason, because we need to decide whether to continue
-      contact within a short period of time.
-    npcResponse: The time we spent together was indeed a bit short.
+      contact within this short date.
+    npcResponse: Yes it's really short time.
   - textPrompt: No
-    textLine: I'm fine! It's just like chatting, no pressure at all!
-    npcResponse: OK. Cool.
+    textLine: I'm fine. It's just like chatting, No pressure at all.
+    npcResponse: That's alright.

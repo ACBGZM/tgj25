@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.PlayerTurnSO
   level: 1
   playerTopic:
-    textPrompt: How are your photography skills?
-    textLine: When it comes to photography, are you quite experienced? Would you
-      specifically buy professional equipment?
-    npcResponse: I bought a Canon 5D Mark II a long time ago, but I've started to
-      like film cameras in the last two years.
+    textPrompt: Are you into photography?
+    textLine: You into photography? Do you invest in pro equipment?
+    npcResponse: I've moved past my old Canon 5D2. In the last several years, I've
+      found the organic imperfection of film far more authentic than digital.

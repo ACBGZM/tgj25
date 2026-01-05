@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: NPCTurn_11
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: Chinese animation has been quite popular lately, have you watched any?
+  text: Chinese animation has been so popular lately. Have you had a chance to see
+    any of it?
   playerChoices:
   - textPrompt: I watched The Legend of HEI.
     textLine: I watched Luo Xiaohei! I especially like this kind of animated film
@@ -24,6 +25,6 @@ MonoBehaviour:
       so awesome!
     npcResponse: Yes, it's a significant milestone in film history.
   - textPrompt: I didn't watch it.
-    textLine: I haven't watched any of them; I'm not very interested in domestically
+    textLine: I haven't watched any of them; I'm Not very interested in domestically
       produced animation.
     npcResponse: Oh, I see.

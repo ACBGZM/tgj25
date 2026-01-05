@@ -15,7 +15,7 @@ MonoBehaviour:
   level: 1
   playerTopic:
     textPrompt: Pragmatism or emotional consumption?
-    textLine: If you had a sum of money right now, would you rather buy something
+    textLine: If you had a sum of money right Now, would you rather buy something
       practical or something that brings you emotional value at this stage?
-    npcResponse: Emotional value, I suppose. Things that make people happy can be
-      considered practical?
+    npcResponse: I'd say emotional value. If something makes you happy, that counts
+      as being practical, right?

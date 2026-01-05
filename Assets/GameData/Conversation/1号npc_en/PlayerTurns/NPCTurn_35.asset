@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.PlayerTurnSO
   level: 2
   playerTopic:
-    textPrompt: Do you enjoy collecting things?
-    textLine: What do you like to collect? Not limited to things that are considered
-      "meaningful".
-    npcResponse: Does collecting audio tapes count?
+    textPrompt: Do you collect anything?
+    textLine: "Do you collect anything? It doesn't have to be anything importan'\u2014just
+      whatever you like."
+    npcResponse: Does archiving audio tapes count? I've always found physical media
+      to be more 'honest' than streaming.

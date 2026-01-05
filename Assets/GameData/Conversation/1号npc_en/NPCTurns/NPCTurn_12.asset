@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: NPCTurn_12
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: Where are you planning to go after our date ends?
+  text: Where does your spirit drift once our little rendezvous concludes?
   playerChoices:
   - textPrompt: Go home
     textLine: I'm a little tired today, I just want to go home and lie down...
-    npcResponse: Okay. Then you should get some rest.
-  - textPrompt: Hang out around
-    textLine: Since finally getting out of home, I'd like to wander around and kill
-      the whole day.
-    npcResponse: Yes, the weather is quite nice today.
+    npcResponse: Fair enough. You should go get some sleep, then.
+  - textPrompt: Hang out
+    textLine: Since I'm already out, I think I'll just hang around and kill some
+      time.
+    npcResponse: yeah, the weather is quite nice today.

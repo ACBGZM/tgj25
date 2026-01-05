@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.PlayerTurnSO
   level: 2
   playerTopic:
-    textPrompt: Is it a long-lasting affection or just a fleeting infatuation?
-    textLine: Do you tend to be passionate about hobbies for a long time, or do you
-      often only have a fleeting interest?
-    npcResponse: I'm probably the latter, right? The cycle is about a year; I might
-      like this anime this year, but I might switch next year.
+    textPrompt: Usually long-lasting affection or just a fleeting infatuation?
+    textLine: Do you tend to be passionate about a stuff for a long time, or often
+      only have a fleeting interest?
+    npcResponse: "I think I'm more of the latter. My hyperfixations last about a
+      year\u2014like, this year I fall in love with this anime, and next year it'll
+      be something else."

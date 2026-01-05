@@ -15,6 +15,6 @@ MonoBehaviour:
   level: 2
   playerTopic:
     textPrompt: Where would you choose to go on a date?
-    textLine: If you were to plan your next date, where would you go?
-    npcResponse: If you'd like, we can go eat Japanese food first, then go to a craft
-      shop, or play video games.
+    textLine: If you were to plan our next date, which place would you choose?
+    npcResponse: If you'd like, we could grab some Japanese food first, then maybe
+      hit a craft workshop or go to play some arcade games?

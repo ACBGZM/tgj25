@@ -13,16 +13,17 @@ MonoBehaviour:
   m_Name: NPCTurn_16
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: Would you mind if your partner had different opinions on certain things?
+  text: Would it annoy you if a partner held a different perspective on certain things?
+    I'd love to know your thoughts on that.
   playerChoices:
-  - textPrompt: YES
+  - textPrompt: Yes
     textLine: I'm quite concerned about this because it could lead to arguments.
-    npcResponse: Hmm... if both parties feel this is an important topic.
-  - textPrompt: NO
+    npcResponse: Hmm... if both feel this is an important topic.
+  - textPrompt: No
     textLine: I don't mind; it's impossible for everyone to think exactly the same
       way!
     npcResponse: It's impossible for them to be exactly the same.
   - textPrompt: It depends
-    textLine: "It depends... They'll definitely be very concerned about issues involving
-      values \u200B\u200Band beliefs."
-    npcResponse: "Hmm... having the right values \u200B\u200Bis very important."
+    textLine: "It depends... I may be very concerned about issues involving values
+      \u200B\u200Band beliefs."
+    npcResponse: Hmm... having similiar values is very important.

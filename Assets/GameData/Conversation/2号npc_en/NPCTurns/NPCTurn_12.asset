@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: NPCTurn_12
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: Given the recent international situation, I would like to ask you what your
-    views are on some of the restrictions on cultural and entertainment activities?
+  text: With everything going on in the world, I was wondering... how do you feel
+    about the restrictions on foreign entertainment?
   playerChoices:
   - textPrompt: Great initiative
-    textLine: At all times, entertainment must yield to politics; this is no trivial
+    textLine: At all times, entertainment must yield to politics; this is No trivial
       matter.
-    npcResponse: There's no room for maneuver...
+    npcResponse: There's No room for maneuver...
   - textPrompt: Need further consideration
     textLine: At this time, art may serve as an important bridge for mutual communication.
     npcResponse: I wonder what will happen next...

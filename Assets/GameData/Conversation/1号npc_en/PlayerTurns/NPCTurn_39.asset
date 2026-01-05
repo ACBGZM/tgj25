@@ -15,7 +15,7 @@ MonoBehaviour:
   level: 2
   playerTopic:
     textPrompt: What sentence has touched you recently?
-    textLine: If you had three seconds to say one sentence that recently touched
-      you deeply, which sentence would you choose?
-    npcResponse: '"As many eyes open and as many consciousnesses awaken each morning,
-      there are as many worlds."'
+    textLine: If you had three seconds to name one sentence that's really hit you
+      deep lately, what would it be?
+    npcResponse: "\"As many eyeah open and as many consciousnesses awaken each morning,
+      there are as many worlds.\" A bit clich\xE9, but profoundly accurate."

@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: NPCTurn_15
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: When you meet someone for the first time, what factors do you usually consider
-    to decide whether or not to continue the relationship?
+  text: When meeting someone for the first time, what are the qualities that make
+    you feel, "Yes, I'd like to date with them again"?
   playerChoices:
   - textPrompt: Character
-    textLine: It's definitely about character, although you might not be able to
-      tell immediately.
+    textLine: It's definitely about character, although we might tot be able to tell
+      immediately.
     npcResponse: After all, it was our first meeting.
   - textPrompt: Personality
-    textLine: It's about personality. If your personalities don't match, you can't
+    textLine: It's about personality. If our personalities don't match, we can't
       even have a proper conversation.
-    npcResponse: So we don't have any personality clashes?
+    npcResponse: So...our personalities match?

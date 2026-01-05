@@ -13,17 +13,15 @@ MonoBehaviour:
   m_Name: NPCTurn_10
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: When interacting with others, do you prefer someone who is outdoorsy or someone
-    who is homebody?
+  text: When you're with someone, do you prefer doing outdoor activities, or staying
+    in more?
   playerChoices:
   - textPrompt: Homebody
     textLine: Since I'm a homebody myself, I hope my partner is similar to me.
-    npcResponse: Hmm, is it okay if we can snuggle together and watch dramas or play
-      games?
+    npcResponse: Hmm, like snuggling together and watching dramas or playing games?
   - textPrompt: Outdoorsy
-    textLine: If both of you are free, it would be better to go out for a stroll
-      together.
+    textLine: If both of us are free, it would be better to go out for a stroll together.
     npcResponse: Well, there are probably more options for outdoor activities.
   - textPrompt: It doesn't matter
     textLine: I'm fine, it depends on what the other person wants to do!
-    npcResponse: Hmm, should we give the choice to the other party?
+    npcResponse: Hmm, cool.

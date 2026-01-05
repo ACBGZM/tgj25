@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: NPCTurn_15
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: Have you had any moments lately where you felt like, "Wow, I'm so amazing"?
+  text: Have you had any moments lately when you felt, like, "Wow, I'm actually doing
+    great"?
   playerChoices:
-  - textPrompt: YES
+  - textPrompt: Yes
     textLine: Of course, there are moments that are very rewarding, even if they
       are very small.
     npcResponse: Life is made up of countless moments...
-  - textPrompt: NO
-    textLine: Nothing major has happened lately...
+  - textPrompt: No
+    textLine: Nothing much, really.
     npcResponse: Peaceful days may also be important.

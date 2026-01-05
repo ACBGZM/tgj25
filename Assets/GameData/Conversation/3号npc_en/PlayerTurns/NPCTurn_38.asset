@@ -15,6 +15,6 @@ MonoBehaviour:
   level: 2
   playerTopic:
     textPrompt: What is "happiness"?
-    textLine: How do you define "happiness"? Are you happy right now?
-    npcResponse: I'm healthy enough to sit here talking to you, discussing romantic
-      relationship; that's probably what "happiness" is.
+    textLine: How do you define "happiness"? Are you happy right Now?
+    npcResponse: Sitting here, healthy and conversing with you, with the luxury to
+      discuss romance... I suppose that's its own form of "happiness."
