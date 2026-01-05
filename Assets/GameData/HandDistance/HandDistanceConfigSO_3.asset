@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: HandDistanceConfigSO_3
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.HandDistanceConfigSO
   level1:
-    approach: 0.4
-    withdraw: 0.6
-  level2:
-    approach: 0.5
-    withdraw: 0.5
-  level3:
     approach: 0.6
     withdraw: 0.4
-  level4:
+  level2:
+    approach: 0.7
+    withdraw: 0.3
+  level3:
     approach: 0.8
     withdraw: 0.2
+  level4:
+    approach: 0.9
+    withdraw: 0.1
   level5:
     approach: 1
     withdraw: 0
