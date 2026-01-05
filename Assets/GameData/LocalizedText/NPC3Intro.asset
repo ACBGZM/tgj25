@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: NPC3Intro
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.LanguageTextSO
   chinese: "\u4F60\u4EEC\u7684\u5BF9\u8BDD\u7ED3\u675F\u4E86\uFF0C\u518D\u603B\u6709\u65B0\u7684\u5BF9\u8BDD\u5373\u5C06\u5F00\u542F\uFF0C\u8FC7\u4E86\u4E00\u4F1A\u513F\uFF0C\u6709\u4EBA\u5750\u4E0B\u4E86\u3002"
-  english: Your conversation has ended, yet there is always a new one about to begin.
+  english: 'Your conversation has ended, yet there is always a new one about to begin.
     After a moment, someone sits down.
+
+'

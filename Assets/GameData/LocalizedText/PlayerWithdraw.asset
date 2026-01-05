@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PlayerWithdraw
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.LanguageTextSO
   chinese: "\u4F60\u5F80\u56DE\u7F29\u4E86\u7F29\u624B\uFF0C\u4F60\u4EEC\u4E4B\u95F4\u4F3C\u4E4E\u53D8\u5F97\u6709\u4E9B\u9065\u8FDC\u3002"
-  english: You slightly pulls their hands back. A distance seems to have grown between
+  english: You slightly pulls your hands back. A distance seems to have grown between
     you two.
