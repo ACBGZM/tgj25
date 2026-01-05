@@ -26,23 +26,19 @@ public enum ConcludingChoice : uint
 
 public class DialogueDirector : MonoBehaviour
 {
-    [Header("NPCs")]
-    public List<NPCProfileSO> npcProfiles;
+    [Header("NPCs")] public List<NPCProfileSO> npcProfiles;
     private NPCProfileSO _currentNPC;
     private int _currentNPCIndex = 0;
 
-    [Header("Systems")]
-    public DialogueUI dialogueUI;
+    [Header("Systems")] public DialogueUI dialogueUI;
     private AffectionSystem _affectionSystem;
     public HandDistanceView handDistanceView;
     public GameOpening gameOpening;
 
-    [Header("Config")]
-    public int playerTopicOptionCount = 2;
+    [Header("Config")] public int playerTopicOptionCount = 2;
     public GameTextSO gameTextSO;
 
-    [Header("Audio")]
-    [SerializeField] private AudioClip approachAudioClip;
+    [Header("Audio")] [SerializeField] private AudioClip approachAudioClip;
     [SerializeField] private AudioClip withdrawAudioClip;
 
     private NPCTurnSO _currentNPCTurn;
@@ -54,6 +50,8 @@ public class DialogueDirector : MonoBehaviour
     private TurnInitiator _currentTurnInitiator = TurnInitiator.NPC;
 
     private Coroutine _currentSequence;
+
+    private ConversationMemory _memory;
 
     private void PlaySequence(IEnumerator sequence)
     {
@@ -78,6 +76,8 @@ public class DialogueDirector : MonoBehaviour
 
     public void StartConversation()
     {
+        _memory = new ConversationMemory();
+
         _currentNPC = npcProfiles[_currentNPCIndex];
 
         _affectionSystem.Init(_currentNPC.handDistanceConfig);
@@ -115,7 +115,9 @@ public class DialogueDirector : MonoBehaviour
     private void StartNPCTurn()
     {
         currentState = DialogueState.NPCOpening;
-        _currentNPCTurn = RandomHelper.PickOne(_currentNPC.GetPoolByLanguage(LanguageManager.Instance.CurrentLanguage).npcTurnPool.npcTurns);
+
+        _currentNPCTurn = PickUnusedNPCTurn();
+        _memory.UsedNpcTurns.Add(_currentNPCTurn);
 
         PlaySequence(NPCTurnSequence());
     }
@@ -152,8 +154,7 @@ public class DialogueDirector : MonoBehaviour
 
     private void StartPlayerTurn()
     {
-        _currentPlayerTurnOptions =
-            RandomHelper.PickRandomList(_currentNPC.GetPoolByLanguage(LanguageManager.Instance.CurrentLanguage).playerTurnPool.playerTurns, playerTopicOptionCount);
+        _currentPlayerTurnOptions = PickPlayerTurnOptions();
 
         PlaySequence(PlayerTurnSequence());
     }
@@ -181,6 +182,7 @@ public class DialogueDirector : MonoBehaviour
         yield return YieldHelper.WaitUntil(() => topicChosen);
 
         _selectedPlayerChoice = _currentPlayerTurnOptions[selectedIndex].playerTopic;
+        _memory.ChosenPlayerTurns.Add(_currentPlayerTurnOptions[selectedIndex]);
 
         dialogueUI.ShowPlayerText(_selectedPlayerChoice.textLine);
         yield return YieldHelper.WaitForSeconds(2.0f);
@@ -239,7 +241,7 @@ public class DialogueDirector : MonoBehaviour
 
     private IEnumerator ResolveSequence(int npcResult, int playerResult)
     {
-        yield return YieldHelper.WaitForSeconds(2.0f);
+        yield return YieldHelper.WaitForSeconds(1.0f);
         dialogueUI.ClearChat();
 
         yield return YieldHelper.WaitForSeconds(1.0f);
@@ -273,7 +275,7 @@ public class DialogueDirector : MonoBehaviour
         {
             handDistanceView.ShowCornerText(LanguageManager.Instance.GetLanguageText(gameTextSO.approachTextPlayer));
         }
-        else if (npcResult == 0 && _currentTurnInitiator ==  TurnInitiator.NPC)
+        else if (npcResult == 0 && _currentTurnInitiator == TurnInitiator.NPC)
         {
             handDistanceView.ShowCornerText(LanguageManager.Instance.GetLanguageText(gameTextSO.maintainTextNPC));
         }
@@ -333,5 +335,57 @@ public class DialogueDirector : MonoBehaviour
         handDistanceView.HideCenterText();
 
         gameOpening.ResetGame();
+    }
+
+    private NPCTurnSO PickUnusedNPCTurn()
+    {
+        int targetLevel = _affectionSystem.NPCLevel <= 3 ? 1 : 2;
+
+        var npcTurns = _currentNPC.GetPoolByLanguage(LanguageManager.Instance.CurrentLanguage).npcTurnPool.npcTurns;
+
+        var candidates = npcTurns
+            .FindAll(t =>
+                t.level == targetLevel
+                && !_memory.UsedNpcTurns.Contains(t));
+
+        if (candidates.Count == 0)
+        {
+            RandomHelper.PickOne(npcTurns);
+        }
+
+        return RandomHelper.PickOne(candidates);
+    }
+
+    private List<PlayerTurnSO> PickPlayerTurnOptions()
+    {
+        int targetLevel = _affectionSystem.PlayerLevel <= 3 ? 1 : 2;
+
+        var playerTurns = _currentNPC.GetPoolByLanguage(LanguageManager.Instance.CurrentLanguage).playerTurnPool
+            .playerTurns;
+
+        var candidates = playerTurns
+            .FindAll(t =>
+                t.level == targetLevel
+                && !_memory.ChosenPlayerTurns.Contains(t));
+
+        if (candidates.Count == 0)
+        {
+            RandomHelper.PickRandomList(playerTurns, playerTopicOptionCount);
+        }
+
+        return RandomHelper.PickRandomList(candidates, playerTopicOptionCount);
+    }
+}
+
+public class ConversationMemory
+{
+    public HashSet<NPCTurnSO> UsedNpcTurns = new();
+
+    public HashSet<PlayerTurnSO> ChosenPlayerTurns = new();
+
+    public void Reset()
+    {
+        UsedNpcTurns.Clear();
+        ChosenPlayerTurns.Clear();
     }
 }
