@@ -242,29 +242,36 @@ public class DialogueDirector : MonoBehaviour
         yield return YieldHelper.WaitForSeconds(2.0f);
         dialogueUI.ClearChat();
 
-        yield return YieldHelper.WaitForSeconds(0.5f);
+        yield return YieldHelper.WaitForSeconds(1.0f);
 
         handDistanceView.UpdateView(_affectionSystem.PlayerLevel, _affectionSystem.NPCLevel);
+
+        if (npcResult < 0 || playerResult < 0)
+        {
+            AudioManager.Instance.PlaySFX(withdrawAudioClip);
+        }
+        else if (npcResult > 0 || playerResult > 0)
+        {
+            AudioManager.Instance.PlaySFX(approachAudioClip);
+        }
+
+        yield return YieldHelper.WaitForSeconds(1.0f);
 
         if (npcResult < 0)
         {
             handDistanceView.ShowCornerText(gameTextSO.withdrawTextNPC);
-            AudioManager.Instance.PlaySFX(withdrawAudioClip);
         }
         else if (playerResult < 0)
         {
             handDistanceView.ShowCornerText(gameTextSO.withdrawTextPlayer);
-            AudioManager.Instance.PlaySFX(withdrawAudioClip);
         }
         else if (npcResult > 0)
         {
             handDistanceView.ShowCornerText(gameTextSO.approachTextNPC);
-            AudioManager.Instance.PlaySFX(approachAudioClip);
         }
         else if (playerResult > 0)
         {
             handDistanceView.ShowCornerText(gameTextSO.approachTextPlayer);
-            AudioManager.Instance.PlaySFX(approachAudioClip);
         }
         else if (npcResult == 0 && _currentTurnInitiator ==  TurnInitiator.NPC)
         {
