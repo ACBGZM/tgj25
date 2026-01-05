@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Next
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.LanguageTextSO
   chinese: "\u5F00\u542F\u4E0B\u4E00\u6BB5\u76F8\u9047"
-  english: Next
+  english: Next Encounter
