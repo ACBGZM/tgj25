@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: WithdrawButton
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.LanguageTextSO
   chinese: "\u8FDC\u79BBta\u4E00\u4E9B"
-  english: Step Back
+  english: Pull Away

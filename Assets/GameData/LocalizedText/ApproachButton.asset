@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ApproachButton
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.LanguageTextSO
   chinese: "\u9760\u8FD1ta\u4E00\u4E9B"
-  english: Move Closer
+  english: Draw Closer
