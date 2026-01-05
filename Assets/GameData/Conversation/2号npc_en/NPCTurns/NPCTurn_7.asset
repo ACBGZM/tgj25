@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: NPCTurn_7
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 1
-  text: I don't come to cafe like this often. Do you like this place?
+  text: I don't really come to cafes like this often. Do you think it's a nice place?
   playerChoices:
-  - textPrompt: YES
-    textLine: I quite like the atmosphere of this cafe.
+  - textPrompt: Yes
+    textLine: I quite like the vibe here.
     npcResponse: Hmm, the decor feels quite unique.
-  - textPrompt: NO
-    textLine: "Can I be honest\u2014I don't really like the atmosphere of this cafe."
-    npcResponse: Of course you can tell the truth! Then I won't choose this place
-      next time.
+  - textPrompt: No
+    textLine: "Be honest\u2014I don't really like the atmosphere here."
+    npcResponse: Then I won't choose this place next time.

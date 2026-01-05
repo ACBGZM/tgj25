@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: NPCTurn_10
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: May I ask which type is closer to your ideal type?
+  text: If you don't mind me asking, what kind of person usually captures your heart?
+    I mean, what's your "ideal type"?
   playerChoices:
-  - textPrompt: gentle and considerate
-    textLine: A gentle and considerate person!
-    npcResponse: The kind that cares about people.
+  - textPrompt: Gentle and considerate
+    textLine: A gentle and considerate person.
+    npcResponse: Okay.
   - textPrompt: Cheerful and opinionated
-    textLine: I like cheerful people who are assertive and don't ask me about everything.
+    textLine: Maybe cheerful people who are assertive and don't ask me about everything.
     npcResponse: An independent and self-reliant person.
   - textPrompt: Excellent background
     textLine: I'm rather materialistic; I value a person's education or work background.
-    npcResponse: This is certainly one way to make a judgment.
+    npcResponse: This is certainly one way to make a initial judgment.

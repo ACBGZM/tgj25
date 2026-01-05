@@ -18,5 +18,5 @@ MonoBehaviour:
     textLine: I think some things that happen in childhood have a great influence
       on the shaping of personality and behavioral logic. Do you often think about
       your childhood?
-    npcResponse: "Yes, but all I can remember are the less pleasant things\u2014like
-      the slap my dad gave me."
+    npcResponse: Yeah, but honestly? Only the messy parts stick. Like the memory
+      of my dad slapping me.

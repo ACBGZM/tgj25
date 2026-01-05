@@ -15,6 +15,6 @@ MonoBehaviour:
   level: 1
   playerTopic:
     textPrompt: Do you sing karaoke?
-    textLine: Do you usually go to karaoke? Do you have any must-sing songs?
-    npcResponse: During my holidays, I go to karaoke three times a week! My must-sing
-      song is definitely Toxic.
+    textLine: Do you usually go to karaoke? Any must-sing songs?
+    npcResponse: I actually go to KTV like three times a week during holidays! Toxic
+      is my "that song".

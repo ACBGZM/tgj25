@@ -15,8 +15,7 @@ MonoBehaviour:
   level: 2
   playerTopic:
     textPrompt: Do you prefer nature or the city?
-    textLine: "Although we are all caught up in the city now, it may be a bit pointless
-      to ask this question\u2014do you prefer the atmosphere of the city or the feeling
-      of nature in the countryside?"
-    npcResponse: If I had the chance, I would settle in the countryside, where things
-      that are natural and unpretentious would make me feel more relaxed.
+    textLine: I know we're both stuck in the city right now, but do you prefer the
+      urban vibe or being out in nature?
+    npcResponse: "If I could, I'd retreat to the countryside. I'm drawn to things
+      that are unpretentious\u2014raw, natural, and devoid of urban artifice."

@@ -13,17 +13,16 @@ MonoBehaviour:
   m_Name: NPCTurn_13
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: "This coffee shop is actually just average in quality; it relies entirely
-    on marketing. I wonder if it's a bit strange to ask this\u2014what are your thoughts
-    on consumerism?"
+  text: This cafe is actually just average in quality; it relies entirely on marketing.
+    Random question, but... how do you feel about consumerism?
   playerChoices:
   - textPrompt: Bad thing
     textLine: It made me very sensitive and vigilant.
     npcResponse: Hmm...a feeling of being coerced?
   - textPrompt: Hallucination
-    textLine: Just like how the two of us ultimately chose this coffee shop.
-    npcResponse: Yes, the impact is real.
+    textLine: Just like how the two of us ultimately chose this cafe.
+    npcResponse: Yeah, you can't really escape it.
   - textPrompt: No thoughts
-    textLine: As a small individual, I think I don't have much to say about the overall
-      environment.
-    npcResponse: The more lucid we are, the more pain we experience?
+    textLine: Honestly, I'm just one person. I don't really have much to say about
+      the "big picture".
+    npcResponse: Maybe the more self-aware we become, the more it hurts?

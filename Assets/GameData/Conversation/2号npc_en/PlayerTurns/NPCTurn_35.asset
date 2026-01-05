@@ -17,5 +17,5 @@ MonoBehaviour:
     textPrompt: Do you like formalities?
     textLine: When you talk to others, do you tend to use a more polite and courteous
       approach?
-    npcResponse: I usually say what I think, and I'll be quite outspoken as long
-      as it's not negative feedback.
+    npcResponse: I usually just say what I really want to say, as long as it's Not
+      something negative.

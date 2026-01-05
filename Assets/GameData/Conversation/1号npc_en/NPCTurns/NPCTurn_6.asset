@@ -13,16 +13,17 @@ MonoBehaviour:
   m_Name: NPCTurn_6
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 1
-  text: Do you enjoy reading? Both physical books and e-books are fine.
+  text: Do you read much? Print or digital? Or has the screen killed your attentionspan?
   playerChoices:
-  - textPrompt: Enjoy novels
-    textLine: I read novels often; I like both serious novels and web novels.
+  - textPrompt: Like novels
+    textLine: I read a lot, anything from classic literature to trashy web novels,
+      honestly.
     npcResponse: I've been reading The Plague recently.
-  - textPrompt: Enjoy philosophical books
+  - textPrompt: Like philosophical books
     textLine: I prefer philosophical books.
     npcResponse: I've been reading Hesse recently.
-  - textPrompt: Enjoy professional books
-    textLine: I've been busy writing my thesis lately, and I've only read professional
-      books and literature.
-    npcResponse: To make matters funny, reading academic papers is when I read at
-      my slowest speed.
+  - textPrompt: Like professional books
+    textLine: I'm stuck writing my thesis, so all I'm reading right now is academic
+      stuff.
+    npcResponse: Funny enough, it takes me forever to get through a single academic
+      paper.

@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: NPCTurn_10
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 1
-  text: Do you travel often, or are you a homebody?
+  text: "Are you a fl\xE2neur seeking new landscapes, or do you prefer the cloistered
+    comfort of home?"
   playerChoices:
-  - textPrompt: Travel
-    textLine: I absolutely love traveling, and I go somewhere every few months!
-    npcResponse: Wow, so frequently!
+  - textPrompt: I travel
+    textLine: I absolutely love traveling, and I try to get away every few months!
+    npcResponse: Wow, that's a lot!
   - textPrompt: I don't travel much.
-    textLine: Traveling is a bit too draining for me... Going once a year is fine.
-    npcResponse: I see it.
+    textLine: Traveling is a bit too draining for me... Honestly, once a year is
+      more than enough.
+    npcResponse: I see.

@@ -15,6 +15,6 @@ MonoBehaviour:
   level: 2
   playerTopic:
     textPrompt: When faced with disapproval from others, you...
-    textLine: Would you be sad if others scoffed at what you were doing seriously?
-    npcResponse: It will hurt, but the lack of approval from others is just the norm
-      in life, so all I can do is be the best I can be.
+    textLine: Would you be sad if you received disapproval from others?
+    npcResponse: I'd be sad, but I guess people Not agreeing with you is just part
+      of life. I just try to be myself.

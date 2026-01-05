@@ -13,16 +13,15 @@ MonoBehaviour:
   m_Name: NPCTurn_4
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 1
-  text: Can I ask about your hobbies? Just name one.
+  text: Um, if it's okay, could I ask what you like to do? Anything is fine.
   playerChoices:
   - textPrompt: Fiteness
     textLine: I got a gym membership and go every week. I've been working on my glutes
       and legs lately.
-    npcResponse: What a healthy hobby!
+    npcResponse: That's healthy.
   - textPrompt: Watching dramas
-    textLine: I love watching TV shows! Lately I've been rewatching Stranger Things
-      and Empresses in the Palace.
-    npcResponse: Those are truly classical!
+    textLine: Maybe watching dramas? Lately I've been rewatching Stranger Things.
+    npcResponse: That is truly a classic.
   - textPrompt: Playing games
     textLine: I bought a PS5 and have been obsessed with Legacy of Hogwarts lately.
-    npcResponse: Oh right, The Legacy of Hogwarts is on sale right now.
+    npcResponse: Oh right, The Legacy of Hogwarts is on sale right Now.

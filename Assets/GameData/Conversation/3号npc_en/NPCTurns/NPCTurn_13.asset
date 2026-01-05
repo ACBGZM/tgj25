@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: NPCTurn_13
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: I'd like to ask you what kind of person you think I am?
+  text: I'm a bit curious... if you had to describe your first impression of me,
+    what would it be?
   playerChoices:
   - textPrompt: Not bad
-    textLine: I think you're pretty good so far!
+    textLine: I think you're pretty good so far.
     npcResponse: Thanks!
   - textPrompt: Hard to tell
     textLine: We haven't known each other long, so it's hard to tell.
-    npcResponse: I'm sorry, I care too much about what others think.
+    npcResponse: Okay. Sorry, you are right.

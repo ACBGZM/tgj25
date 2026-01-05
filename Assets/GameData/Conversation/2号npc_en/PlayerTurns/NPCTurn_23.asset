@@ -15,6 +15,5 @@ MonoBehaviour:
   level: 1
   playerTopic:
     textPrompt: Do you have any recommended anime?
-    textLine: If you were to recommend an animated film to me, which one would you
-      choose?
-    npcResponse: I would recommend Demon Slayer.
+    textLine: If you were to recommend an anime to me, which one would you choose?
+    npcResponse: Definitely Demon Slayer. It's really cool.

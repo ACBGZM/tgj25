@@ -17,6 +17,5 @@ MonoBehaviour:
     textPrompt: Do you often recommend things to others?
     textLine: Do you long for others to like the things you love and to enthusiastically
       recommend them?
-    npcResponse: Yes, regardless of whether the recommendation is successful or not,
-      the act of introducing others to things I like is inherently enjoyable for
-      me.
+    npcResponse: I do! Regardless of whether they like it or Not, just sharing what
+      I love makes me satisfied.

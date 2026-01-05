@@ -13,16 +13,15 @@ MonoBehaviour:
   m_Name: NPCTurn_18
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: If someone is passionate about a certain hobby, how would you view them?
+  text: What do you think of people who are really passionate about their hobbies?
   playerChoices:
   - textPrompt: Approval
     textLine: I think people who can focus on one thing and dedicate themselves to
       it are quite impressive.
     npcResponse: Hobbies can also be a way to add variety to life.
   - textPrompt: Disagree
-    textLine: If it gets too fanatical, I'll find it a bit scary.
-    npcResponse: Are you referring to that level of fanaticism that has affected
-      one's life?
+    textLine: If it gets too crazy, I'll find it a bit scary.
+    npcResponse: Oh, I see.
   - textPrompt: It doesn't matter
     textLine: I don't think it matters.
     npcResponse: 

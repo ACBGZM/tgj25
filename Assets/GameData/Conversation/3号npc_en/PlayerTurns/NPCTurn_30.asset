@@ -16,5 +16,5 @@ MonoBehaviour:
   playerTopic:
     textPrompt: Do you ever feel stressed?
     textLine: Do you ever feel a lot of pressure?
-    npcResponse: Actually, everyone has those moments more or less, but once you
-      get through them, you'll feel amazing for being able to persevere!
+    npcResponse: Everyone has those moments, right? But once you're through it, you
+      realize how incredibly resilient you are for sticking it out.

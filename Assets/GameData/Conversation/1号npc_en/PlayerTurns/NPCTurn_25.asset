@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.PlayerTurnSO
   level: 1
   playerTopic:
-    textPrompt: Do you have a favorite movie?
-    textLine: Are there any movies on your must-see list that you would particularly
-      like to recommend to me?
-    npcResponse: It's probably Inside Llewyn Davis, I don't know if you've heard
-      of it.
+    textPrompt: Do you have any favorite movie?
+    textLine: Any must-see movies on your list that you'd particularly recommend?
+    npcResponse: "Probably Inside Llewyn Davis. It's a bit niche\u2014I'm not sure
+      if it's even popped up on your radar yet."

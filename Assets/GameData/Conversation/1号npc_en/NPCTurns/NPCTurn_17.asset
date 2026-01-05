@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: NPCTurn_17
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: Have you taken the MBTI test? Are you an i-person or an e-person?
+  text: "So, have you joined the MBTI cult yet? Where do you land\u2014introvert
+    or extrovert?"
   playerChoices:
-  - textPrompt: I-person
-    textLine: I'm more of an "i" type, so I'm slow to warm up.
+  - textPrompt: Invrovert
+    textLine: I'm more of an invrovert, I'm slow to warm up.
     npcResponse: Oh, an introverted personality.
-  - textPrompt: eperson
-    textLine: I'm an e-person, can you tell?
-    npcResponse: Yes, I think you're quite extroverted.
+  - textPrompt: Extrovert
+    textLine: I'm an extrovert, can you tell?
+    npcResponse: Yeah, I figured. You definitely have that energy.
   - textPrompt: What's MBTI?
-    textLine: I don't really look at things like MBTI.
-    npcResponse: It's okay, not important.
+    textLine: I don't really follow all that MBTI stuff.
+    npcResponse: It doesn't really matter anyway.

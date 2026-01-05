@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: NPCTurn_14
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: In life, do you often find yourself unable to tolerate other people's hobbies?
+  text: Do you ever find other people's hobbies... I don't kNow, a bit hard to get?
   playerChoices:
-  - textPrompt: YES
-    textLine: I've been through some... I've had hobbies that really affect other
-      people, and I just can't stand those.
-    npcResponse: Yeah, it's affecting other people...
+  - textPrompt: Yes
+    textLine: If their passion really affect others, I may Not stand.
+    npcResponse: Yeah, if it affected other people...
   - textPrompt: Not often
-    textLine: No, why should we interfere with other people's hobbies?
+    textLine: Not really. I mean, why bother judging what other people are into?
     npcResponse: Okay, I understand...

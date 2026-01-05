@@ -17,5 +17,5 @@ MonoBehaviour:
     textPrompt: Do you prefer living alone or in a group?
     textLine: 'Just a hypothetical scenario: if you were in a foreign country, would
       you prefer living alone or sharing an apartment?'
-    npcResponse: Living alone, I've always felt that people need a room of their
-      own.
+    npcResponse: Living solo is a necessity. Like Woolf said, one must have a room
+      of one's own to truly exist.

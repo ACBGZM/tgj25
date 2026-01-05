@@ -15,7 +15,7 @@ MonoBehaviour:
   level: 1
   playerTopic:
     textPrompt: How to balance work and life?
-    textLine: After starting work, do you find it difficult to balance work and life?
-      How do you do it?
-    npcResponse: Actually, for me, a change of location simply means a shift in my
-      physical functions, so there's not much need for balance...
+    textLine: Do you find it difficult to balance work and life? How do you deal
+      with it?
+    npcResponse: "Actually, changing locations acts like a switch for my mental state.
+      I don't necessarily need a \"balance\"\u2014just a shift in focus."

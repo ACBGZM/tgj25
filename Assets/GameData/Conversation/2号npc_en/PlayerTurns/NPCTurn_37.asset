@@ -16,5 +16,6 @@ MonoBehaviour:
   playerTopic:
     textPrompt: How to relax?
     textLine: Have you found any items lately that help you relax?
-    npcResponse: I bought a mini goddess statue from Zelda and placed it next to
-      my succulents. It's very soothing to look up at it.
+    npcResponse: I bought a mini Goddess Statue from The Legend of  Zelda. A real
+      one. I put it right next to my succulents, and just looking at it feels so
+      healing.

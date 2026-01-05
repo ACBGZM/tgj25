@@ -16,5 +16,5 @@ MonoBehaviour:
   playerTopic:
     textPrompt: Do you enjoy challenges?
     textLine: Do you enjoy challenges, whether in life, studies, or career?
-    npcResponse: If it's a field I really love, I'd be very happy to take on the
-      challenge.
+    npcResponse: If it's something I'm truly passionate about, I'd be more than happy
+      to take on the challenge.

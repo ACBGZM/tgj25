@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: NPCTurn_4
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 1
-  text: Do you like the atmosphere here?
+  text: Do you enjoy the atmosphere here? I hope you like it.
   playerChoices:
-  - textPrompt: YES
-    textLine: It's quite quiet here, which I like.
-    npcResponse: This place does indeed have low customer traffic.
-  - textPrompt: NO
+  - textPrompt: Yes
+    textLine: It's quiet here. Lovely.
+    npcResponse: "Yes, it\u2019s refreshingly uncrowded."
+  - textPrompt: No
     textLine: To be honest, it's a bit too quiet here.
-    npcResponse: This place does indeed have low customer traffic.
+    npcResponse: Yes, they don't have many customers.
   - textPrompt: It doesn't matter
-    textLine: It's fine, I think either way is fine.
-    npcResponse: OK
+    textLine: It's fine, I am not that strict about the atomsphere.
+    npcResponse: Okay I see.

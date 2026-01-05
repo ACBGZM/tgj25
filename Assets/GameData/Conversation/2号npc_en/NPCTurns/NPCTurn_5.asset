@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: NPCTurn_5
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 1
-  text: I overheard them playing One Last Kiss while I was waiting in the store...
-    Oh, sorry, have you ever watched EVA?
+  text: I just heard One Last Kiss playing when I entered the cafe... Sorry, Have
+    you ever watched the anime Evangelion?
   playerChoices:
-  - textPrompt: YES
-    textLine: Of course I've watched it. I bought tickets for all the theatrical
-      versions and watched them in cinema.
-    npcResponse: Watching them consecutively is truly comparable to a marathon.
-  - textPrompt: NO
-    textLine: No, although I've heard of it.
-    npcResponse: Yes, EVA is quite famous.
+  - textPrompt: Yes
+    textLine: Of course! I went to the cinema three times when the the final theatrical
+      was released.
+    npcResponse: So many times. So you really love it.
+  - textPrompt: No
+    textLine: Sorry, I haven't watched it, although I've heard of it.
+    npcResponse: Yes, the series is quite famous.

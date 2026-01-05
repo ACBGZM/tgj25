@@ -16,4 +16,5 @@ MonoBehaviour:
   playerTopic:
     textPrompt: What makes you feel healed?
     textLine: Is there anything that heals you?
-    npcResponse: My comforter...! I bought a very expensive goose down comforter.
+    npcResponse: It would have to be my bedding. I treated myself to a very high-end
+      goose-down duvet.

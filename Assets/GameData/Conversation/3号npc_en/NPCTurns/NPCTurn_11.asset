@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: NPCTurn_11
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: Have you had any happy or unhappy events lately? You can tell me about them.
+  text: "Have there been any moments lately\u2014happy or otherwise\u2014that you'd
+    like to share?"
   playerChoices:
   - textPrompt: Happy
     textLine: I've had a lot of happy stuff happen lately!

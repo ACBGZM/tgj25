@@ -13,15 +13,17 @@ MonoBehaviour:
   m_Name: NPCTurn_11
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: Where do you usually go when you go out for fun?
+  text: Where do you usually hang out in the city?
   playerChoices:
   - textPrompt: Bar
     textLine: Bars are lively and crowded.
-    npcResponse: I have a funny friend who goes to bars to listen to music.
+    npcResponse: I have a funny friend who actually goes to bars just to listen to
+      music.
   - textPrompt: bookstore
-    textLine: Bookstores are quieter; I'd go there to write papers or browse books.
-    npcResponse: Excellent academic work!
+    textLine: Bookstores are way quieter. I usually go there to work on my papers
+      or just browse.
+    npcResponse: Ah, spoken like a true academic!
   - textPrompt: Amusement park
-    textLine: Let's go to the amusement park with friends. I even bought an annual
-      pass to queue for the interactive rides.
+    textLine: I love going to amusement parks with friends. I even got an annual
+      pass just to wait in line for the interactive rides.
     npcResponse: Don't you think that "role-playing" has a strong philosophical undertone?

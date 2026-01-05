@@ -16,5 +16,5 @@ MonoBehaviour:
   playerTopic:
     textPrompt: What is your attitude towards unruly children?
     textLine: If a naughty child comes to your home, how would you deal with them?
-    npcResponse: I'll lock the bedroom door...sorry, I have a lot of valuable, fashionable
-      little junk in my house...
+    npcResponse: I'd probably lock my bedroom door... Sorry, I just have a lot of
+      "expensive aesthetic trash" in my room.

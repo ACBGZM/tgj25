@@ -16,4 +16,4 @@ MonoBehaviour:
   playerTopic:
     textPrompt: Do you take the initiative to contact your date?
     textLine: Will you contact me after you get home today?
-    npcResponse: Of course, and you...?
+    npcResponse: Of course I do. But I'm more curious... do you?

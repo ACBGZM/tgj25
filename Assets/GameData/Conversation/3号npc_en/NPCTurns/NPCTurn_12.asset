@@ -13,14 +13,13 @@ MonoBehaviour:
   m_Name: NPCTurn_12
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: Do you hope your partner will be able to support you in the future, or would
-    you prefer to be independent and not interfere with each other?
+  text: In a relationship, do you prefer a partner who supports you closely, or a
+    partner who maintain your own independent spaces?
   playerChoices:
-  - textPrompt: Assist me
-    textLine: Life is so tough, not just with lovers, but with friends too. It would
-      be great if we could support each other.
-    npcResponse: There will be someone to support you.
+  - textPrompt: Support and assist me
+    textLine: Life is so tough. It would be great if we could support each other.
+    npcResponse: I see.
   - textPrompt: Let each be independent
     textLine: I prefer a state where we are independent and don't interfere with
       each other.
-    npcResponse: Well... everyone is growing in their own way.
+    npcResponse: Well... I see.

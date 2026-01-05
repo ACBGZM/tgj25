@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: NPCTurn_14
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: Do you prefer a detached house or a high-rise apartment when it comes to
-    where you live?
+  text: When it comes to your ideal home, are you more drawn to a private house or
+    the view from a high-rise apartment?
   playerChoices:
   - textPrompt: Detached house
     textLine: I prefer detached houses so I don't disturb my neighbors.

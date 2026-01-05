@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: NPCTurn_16
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: Are you prone to internal conflict when interacting with others?
+  text: Do you ever worry a lot or overthink things when you're with other people?
   playerChoices:
-  - textPrompt: YES
+  - textPrompt: Yes
     textLine: I'm the kind of person who's prone to internal conflict, so I tend
-      to act based on what others think.
+      to act based on others' thought.
     npcResponse: Perhaps you care too much about other people's feelings.
-  - textPrompt: NO
-    textLine: I'm not prone to internal conflict; rather than reflecting on myself...
-    npcResponse: Why not blame others?
+  - textPrompt: No
+    textLine: I'm Not prone to internal conflict; rather than reflecting on myself...
+    npcResponse: Rather than reflecting on ourselves, why Not blaming others?

@@ -15,6 +15,6 @@ MonoBehaviour:
   level: 2
   playerTopic:
     textPrompt: Do you overspend?
-    textLine: Do you overspend when you buy things?
-    npcResponse: Fortunately, but if a product is based on a deposit and final payment
-      system... I often find myself scrambling to make up the final payment.
+    textLine: Do you overspend when you go shopping online?
+    npcResponse: I'm okay with it, but... the "deposit and balance" system always
+      stresses me out. I'm always scrambling when the final payment is due.

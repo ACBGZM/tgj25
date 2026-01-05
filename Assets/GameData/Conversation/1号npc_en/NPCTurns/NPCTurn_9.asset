@@ -13,19 +13,14 @@ MonoBehaviour:
   m_Name: NPCTurn_9
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 1
-  text: Have you ever felt extremely envious of a writer's talent? You know, that
-    feeling of "Wow, their writing is so amazing."
+  text: Is there an author whose brilliance you genuinely envy? That "damn, this
+    is sublime" kind of feeling?
   playerChoices:
   - textPrompt: "Gabriel Garc\xEDa M\xE1rquez"
     textLine: "That must be Gabriel Garc\xEDa M\xE1rquez and his novel One Hundred
       Years of Solitude."
     npcResponse: Ah, this is indeed a masterpiece of Latin American magical realism.
-  - textPrompt: "Gabriel Garc\xEDa M\xE1rquez"
-    textLine: "That must be Gabriel Garc\xEDa M\xE1rquez and his novel One Hundred
-      Years of Solitude."
-    npcResponse: I know that book of his, The Garden of Forking Paths.
   - textPrompt: Virginia Woolf
-    textLine: Virginia, do you know how shocked I was when I finished watching Mrs.
+    textLine: Virginia, do you know how shocked I was when I finished reading Mrs.
       Dalloway?
-    npcResponse: "Oh! I still have a fridge magnet with the words A Room of One\u2019s
-      Own on it."
+    npcResponse: Oh! I have an "A Room of One's Own" magnet on my fridge.

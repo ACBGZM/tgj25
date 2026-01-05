@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: NPCTurn_8
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 1
-  text: Are there any good places to visit nearby? Can you recommend some?
+  text: Are there any places nearby you like? I'd love to hear your recommendations.
   playerChoices:
   - textPrompt: Theme Park
-    textLine: There's a theme park just one subway stop away nearby, and it seems
-      there's a flower show there too.
-    npcResponse: A flower show? You know so much!
+    textLine: There's a theme park just one stop away, and I remember they have a
+      flower show recently.
+    npcResponse: A flower show? I haven't tried that.
   - textPrompt: Vintage store
-    textLine: There seems to be a very famous vintage clothing store next door; I
-      often see it on Xiaohongshu (a Chinese social media platform).
+    textLine: There seems to be a very famous vintage clothing store nearby. I often
+      see it on Instagram.
     npcResponse: This whole street seems to be full of shops with this kind of atmosphere.
   - textPrompt: Anime Mall
-    textLine: Hey, are you going to the "Dimensional Factory"? It's not far from
-      here, there's an anime-themed shopping mall.
-    npcResponse: Oh, I never heard it.
+    textLine: Have you ever tried the "Dimensional Factory" which is an anime-themed
+      shopping mall? It's Not far from here.
+    npcResponse: Oh, I have heard it.

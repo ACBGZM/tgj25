@@ -13,18 +13,15 @@ MonoBehaviour:
   m_Name: NPCTurn_6
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 1
-  text: What do you like to eat? Are there any restaurants you particularly want
-    to visit?
+  text: Do you have any restaurant recommendations?
   playerChoices:
   - textPrompt: Japanese food
-    textLine: Do you like Japanese restaurants? I've saved a Japanese restaurant
-      in my favorites that's nearby.
-    npcResponse: When you think of Japanese food, you probably think of salmon and
-      yakitori, right?
+    textLine: Do you like Japanese restaurants? There is a great Japanese restaurant
+      nearby.
+    npcResponse: Hmm, salmon and yakitori, right?
   - textPrompt: Hot pot
-    textLine: It's gotten a bit colder lately, so I've saved a few hot pot restaurants
-      to my favorites.
-    npcResponse: It seems like we should eat something warm in this temperature.
+    textLine: It's gotten a bit colder lately, maybe hot pot is a good choice.
+    npcResponse: Yes, eat something warm.
   - textPrompt: Northeastern Chinese food
     textLine: I've recently become obsessed with Northeastern Chinese cuisine, it's
       so delicious!

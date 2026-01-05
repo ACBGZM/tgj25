@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: NPCTurn_16
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: 'Please allow me to ask a question: When you are interacting with others,
-    do you value their aesthetic taste?'
+  text: Forgive my bluntness, but do you consider aesthetic taste a prerequisite
+    for any meaningful connection?
   playerChoices:
-  - textPrompt: YES
-    textLine: Ironically, I can't even be friends with people whose aesthetic tastes
-      are very different from mine!
-    npcResponse: It seems that aesthetic compatibility is very important to you.
-  - textPrompt: NO
+  - textPrompt: Yes
+    textLine: Honestly, I find it pretty hard to be friends with people who aren't
+      on the same page as me, aesthetically.
+    npcResponse: So, you're looking for "aesthetic compatibility", then. I get that.
+  - textPrompt: No
     textLine: No, aesthetics is a very subjective thing.
     npcResponse: You must be a very tolerant person.

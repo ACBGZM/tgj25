@@ -17,5 +17,5 @@ MonoBehaviour:
     textPrompt: Independent space of partner?
     textLine: After partners get together, some choose to live independently, while
       others stick together every day. What about you?
-    npcResponse: I will respect my partner's opinion. We can live in two bedrooms,
-      or even next door, and hug each other when we want to see each other.
+    npcResponse: "I respect that completely. We could have separate bedrooms, or
+      even live next door\u2014and simply embrace whenever the longing hits."

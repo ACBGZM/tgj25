@@ -15,7 +15,6 @@ MonoBehaviour:
   level: 2
   playerTopic:
     textPrompt: Are you good at organizing?
-    textLine: When it comes to organization, do you prefer things to be neat and
-      tidy, or organized yet chaotic?
-    npcResponse: Its a little embarrassing, but I'm the type who likes to leave things
-      scattered everywhere and then spend the weekend messily tidying them up again.
+    textLine: Do you prefer things to be neat and tidy, or organized yet chaotic?
+    npcResponse: It's a bit embarrassing, but I'm the type who leaves things everywhere
+      and then frantically cleans up on the weekend.

@@ -15,6 +15,5 @@ MonoBehaviour:
   level: 1
   playerTopic:
     textPrompt: Do you prefer cats or dogs?
-    textLine: If you were to have a pet, would you be a cat person or a dog person?
-    npcResponse: I like them both, but if I were to raise one myself, I'd choose
-      a cat.
+    textLine: If you were to have a pet, cat or dog?
+    npcResponse: I love both, but if I have to choose... I think I'd go with a cat.

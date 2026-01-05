@@ -13,17 +13,16 @@ MonoBehaviour:
   m_Name: NPCTurn_6
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 1
-  text: This store has a lot of animated movie posters on its wall. Do you like watching
-    this kind of work?
+  text: Have you Noticed the anime posters here on the wall? By the way, do you enjoy
+    watching this kind of stuff? I mean anime.
   playerChoices:
-  - textPrompt: YES
-    textLine: Of course I love it! I even flew to Hong Kong to see the re-release
-      of Paprika.
-    npcResponse: Wow, you flew there specifically to see it!
-  - textPrompt: NO
-    textLine: I don't watch animated movies much; I find them a bit childish.
-    npcResponse: There are quite a few children's animated films in China now...
+  - textPrompt: Yes
+    textLine: Of course I love anime! I am an otaku fan.
+    npcResponse: Wow, cool.
+  - textPrompt: No
+    textLine: I don't watch anime much, cuz I find them a bit childish.
+    npcResponse: Hmm...Got it.
   - textPrompt: No particular preference
     textLine: I won't specifically search for it to watch, but I wouldn't refuse
       if a friend asked me to.
-    npcResponse: 
+    npcResponse: Hmm...Got it.

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: NPCTurn_7
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 1
-  text: By the way, do you use Steam?
+  text: By the way, are you on Steam?
   playerChoices:
-  - textPrompt: YES
-    textLine: Yes, I have a Steam account and I've bought quite a few games.
+  - textPrompt: Yes
+    textLine: yeah, I've got a Steam account, and I've bought quite a few games.
     npcResponse: I wonder if there are any fun two-player games.
-  - textPrompt: NO
-    textLine: Ironically, I could never find a webpage to download the official Steam
-      version.
-    npcResponse: I downloaded it when I was in the UK, which was quite convenient.
+  - textPrompt: No
+    textLine: It's so weird, I kept hitting fake sites instead of the official Steam
+      download.
+    npcResponse: I downloaded it when I was in the UK, it was quite convenient.

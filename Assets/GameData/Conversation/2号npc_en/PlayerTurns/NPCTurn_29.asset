@@ -15,7 +15,7 @@ MonoBehaviour:
   level: 1
   playerTopic:
     textPrompt: Alone or with friends?
-    textLine: When you're resting on the weekend, do you prefer to spend time alone
-      or with friends?
-    npcResponse: It depends. If I'm very tired during the weekdays, I might want
-      to spend some time alone on the weekend to recharge.
+    textLine: When you're on the weekend, do you prefer to spend time alone or with
+      friends?
+    npcResponse: It depends. If work was really draining, I usually need the weekend
+      to just stay in and recharge.

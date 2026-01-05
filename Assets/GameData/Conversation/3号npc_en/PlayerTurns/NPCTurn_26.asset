@@ -16,5 +16,5 @@ MonoBehaviour:
   playerTopic:
     textPrompt: Do you plan your trips?
     textLine: If you're going on a trip, do you usually make very detailed plans?
-    npcResponse: When my friends and I go on trips together, they basically leave
-      the whole process to me, and I can even make a PowerPoint presentation.
+    npcResponse: When I travel with friends, they usually just leave the itinerary
+      to me. I've been kNown to produce a full PowerPoint for a single trip.

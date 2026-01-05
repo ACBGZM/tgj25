@@ -17,5 +17,5 @@ MonoBehaviour:
     textPrompt: How do you express your love?
     textLine: When expressing love, do you do it through actions or by simply saying
       it?
-    npcResponse: I will actually help my partner share the pressure, hug them, kiss
-      them, and of course, I will tell them.
+    npcResponse: "I'd actively help shoulder their burdens\u2014with hugs, with kisses,
+      and of course, by making sure they hear how much they matter."

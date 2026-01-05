@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: NPCTurn_15
   m_EditorClassIdentifier: Assembly-CSharp::DataDefinition.NPCTurnSO
   level: 2
-  text: 'Since we may be spending more time together in the future, I''d like to
-    ask you which do you think is more important: differences or commonalities between
-    two people?'
+  text: 'Since we''ll probably be seeing more of each other, I''ve been wondering...
+    what do you think matters more: how we''re different, or what we have in common?'
   playerChoices:
   - textPrompt: Differences
     textLine: Differences are what create the desire to communicate, right? And wouldn't
       it be terrifying if two people were exactly the same, like looking in a mirror?
-    npcResponse: Upon closer examination, no two people are exactly alike.
+    npcResponse: If you look closely enough, no two people are ever really the same
+      anyway.
   - textPrompt: Commonalities
-    textLine: We need to have something in common to be able to have fun together.
+    textLine: We need to have some common ground to actually enjoy being together,
+      don't you think?
     npcResponse: We only notice each other when our paths cross.

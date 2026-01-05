@@ -15,7 +15,7 @@ MonoBehaviour:
   level: 1
   playerTopic:
     textPrompt: Do you have any favorite songs?
-    textLine: Do you have any preferences when listening to music? Based on genre,
-      language, or singer?
-    npcResponse: I listen to any good song, but lately I've been liking post-rock
-      more.
+    textLine: Do you have any preferences when listening to music? Like genre, language,
+      or singer?
+    npcResponse: I'm genre-fluid, but lately, I've been finding solace in the expansive
+      structures of post-rock.
